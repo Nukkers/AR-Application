@@ -683,7 +683,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1650849856}
   - component: {fileID: 1650849859}
-  - component: {fileID: 1650849858}
   - component: {fileID: 1650849857}
   m_Layer: 0
   m_Name: Capsule
@@ -739,19 +738,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &1650849858
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1650849855}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1650849859
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -772,6 +758,8 @@ GameObject:
   - component: {fileID: 1838341214}
   - component: {fileID: 1838341213}
   - component: {fileID: 1838341212}
+  - component: {fileID: 1838341218}
+  - component: {fileID: 1838341219}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -876,6 +864,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1838341218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838341211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardID: 0
+  cardType: 0
+  audioCue: {fileID: 8300000, guid: 45acee910c1842f40b3603b42a470096, type: 3}
+--- !u!65 &1838341219
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838341211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2146897084
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db88a0f3a5c154145a75444ac4f54dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mCamera: {fileID: 2146897088}
   lookAtDuration: 2
 --- !u!114 &2146897086
 MonoBehaviour:

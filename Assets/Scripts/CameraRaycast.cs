@@ -44,6 +44,14 @@ public class CameraRaycast : MonoBehaviour
                     if ((mLookAtElapsedTime > lookAtDuration) && !mPlayedAudioCue)
                     {
                         Debug.Log("Look at duration hit!");
+                        Card _card = rayHit.transform.GetComponent<Card>(); // Attempt to get a handle to a Card object
+                        if (_card == null)
+                            _card = rayHit.transform.parent.GetComponent<Card>(); // Attempt to retrieve from the parent, if the given object is not in the child.
+
+                        if (_card != null) // Check we have a valid handle before trying to call against the object.
+                            _card.PlayAudioCue();
+                        else
+                            Debug.Log("Not a valid Card object! unable to play cue"); // Report that we've been unable to play a cue.
                         mPlayedAudioCue = true;
                     }
                 }
@@ -52,7 +60,7 @@ public class CameraRaycast : MonoBehaviour
         }
         else
         {
-            mLookAtElapsedTime -= Time.fixedDeltaTime;
+            mLookAtElapsedTime -= Time.fixedDeltaTime; // Decrease look-at time while the user isn't looking at the object.
             if(mLookAtElapsedTime < 0)
             {
                 Debug.Log("Stopped tracking look at target");
