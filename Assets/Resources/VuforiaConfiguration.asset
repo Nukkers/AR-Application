@@ -46,11 +46,13 @@ MonoBehaviour:
     dataSetsToLoad:
     - VuforiaMars_Images
     - VuforiaMars_VuMark
+    - Test_DB
     - VuforiaMars_Object_OT
     - VuforiaMars_ModelTarget
     dataSetsToActivate:
     - VuforiaMars_Images
     - VuforiaMars_VuMark
+    - Test_DB
     - VuforiaMars_Object_OT
     - VuforiaMars_ModelTarget
   videoBackground:
