@@ -59,7 +59,6 @@ public class CameraRaycast : MonoBehaviour
             mLookAtElapsedTime -= Time.deltaTime; // Decrease look-at time while the user isn't looking at the object.
             if (mLookAtElapsedTime < 0)
             {
-                Debug.Log("Stopped tracking look at target");
                 /* Reset status */
                 mLastTransform = null;
                 mLookAtElapsedTime = 0.0f;
