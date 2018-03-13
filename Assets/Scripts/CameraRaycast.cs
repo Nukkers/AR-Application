@@ -12,6 +12,7 @@ public class CameraRaycast : MonoBehaviour
     private float mLookAtElapsedTime;
     private Transform mLastTransform;
     private bool mPlayedAudioCue = false;
+    public RectTransform targetReticle;
     // Use this for initialization
     void Start()
     {
@@ -19,11 +20,6 @@ public class CameraRaycast : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-
-    }
-
-    void FixedUpdate()
     {
         /* Send a 'ray' from the middle of the screen towards our scene */
         Ray ray = mCamera.ScreenPointToRay(new Vector3(mCamera.pixelWidth / 2, mCamera.pixelHeight / 2)); // cast from the center of the screen
@@ -38,7 +34,7 @@ public class CameraRaycast : MonoBehaviour
                 {
                     Debug.Log("Looking at object " + rayHit.transform.name);
                     Debug.Log("Looked at for: " + mLookAtElapsedTime);
-                    mLookAtElapsedTime += Time.fixedDeltaTime; // Increment the time by the delta time (i.e., the time elapsed between frames)
+                    mLookAtElapsedTime += Time.deltaTime; // Increment the time by the delta time (i.e., the time elapsed between frames)
 
                     /* The user has looked at the object for x duration, play the audio cue */
                     if ((mLookAtElapsedTime > lookAtDuration) && !mPlayedAudioCue)
@@ -60,8 +56,8 @@ public class CameraRaycast : MonoBehaviour
         }
         else
         {
-            mLookAtElapsedTime -= Time.fixedDeltaTime; // Decrease look-at time while the user isn't looking at the object.
-            if(mLookAtElapsedTime < 0)
+            mLookAtElapsedTime -= Time.deltaTime; // Decrease look-at time while the user isn't looking at the object.
+            if (mLookAtElapsedTime < 0)
             {
                 Debug.Log("Stopped tracking look at target");
                 /* Reset status */
@@ -71,5 +67,10 @@ public class CameraRaycast : MonoBehaviour
 
             }
         }
+    }
+
+    void FixedUpdate()
+    {
+       
     }
 }
