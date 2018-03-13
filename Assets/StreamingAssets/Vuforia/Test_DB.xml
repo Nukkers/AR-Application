@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="tree2" size="1.000000 0.833333" />
+    <ImageTarget name="tree1" size="1.000000 0.833333" />
+    <ImageTarget name="plane2" size="1.000000 0.833333" />
+    <ImageTarget name="plane1" size="1.000000 0.833333" />
+    <ImageTarget name="car2" size="1.000000 0.833333" />
+    <ImageTarget name="car1" size="1.000000 0.833333" />
+    <ImageTarget name="tiger2" size="1.000000 0.833333" />
+    <ImageTarget name="tiger1" size="1.000000 0.833333" />
     <ImageTarget name="tree" size="1.000000 0.562500" />
     <ImageTarget name="tiger" size="1.000000 0.562500" />
     <ImageTarget name="plane" size="1.000000 0.562500" />
