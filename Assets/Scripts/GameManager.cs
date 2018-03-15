@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public List<Card> visibleCardList;
     public int score = 0;
 
-    public ParticleSystem matchedParticleSystemPrefab;
+    public GameObject matchedParticleSystemPrefab;
     /* Singleton implementation */
     private static GameManager mInstance; // Instance of the GameManager object - managed by the singleton accessors (see below)
     public static GameManager Instance
