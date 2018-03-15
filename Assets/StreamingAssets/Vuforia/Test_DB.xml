@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="donut2" size="1.000000 0.750000" />
+    <ImageTarget name="donut1" size="1.000000 0.750000" />
+    <ImageTarget name="Water2" size="1.000000 1.000000" />
+    <ImageTarget name="Water1" size="1.000000 1.000000" />
+    <ImageTarget name="Plant2" size="1.000000 1.000000" />
+    <ImageTarget name="Plant1" size="1.000000 1.000000" />
+    <ImageTarget name="House2" size="1.000000 1.000000" />
+    <ImageTarget name="House1" size="1.000000 1.000000" />
+    <ImageTarget name="Food1" size="1.000000 1.000000" />
+    <ImageTarget name="Cat2" size="1.000000 1.000000" />
+    <ImageTarget name="Cat1" size="1.000000 1.000000" />
     <ImageTarget name="tree2" size="1.000000 0.833333" />
     <ImageTarget name="tree1" size="1.000000 0.833333" />
     <ImageTarget name="plane2" size="1.000000 0.833333" />
