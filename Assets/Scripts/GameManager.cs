@@ -110,8 +110,10 @@ public class GameManager : MonoBehaviour
                     otherCard.matched = true; // Stop that card from being matched in the future
                     
                     /* Instantiate the matched particle FX */
-                    Instantiate(matchedParticleSystemPrefab, card.transform);
-                    Instantiate(matchedParticleSystemPrefab, otherCard.transform);
+                    GameObject fx = Instantiate(matchedParticleSystemPrefab, card.transform);
+                    fx.transform.RotateAroundLocal(Vector3.left, -90); // Deprecated, replace me.
+                    fx = Instantiate(matchedParticleSystemPrefab, otherCard.transform);
+                    fx.transform.RotateAroundLocal(Vector3.left, -90); // Deprecated, replace me.
 
                     /* Remove the cards from the tracked list, we have no need to keep track of them anymore */
                     visibleCardList.Remove(card);

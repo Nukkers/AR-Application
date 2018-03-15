@@ -47,9 +47,13 @@ public class Card : MonoBehaviour, ITrackableEventHandler
         Debug.Log("Played audio cue " + audioCue.name);
     }
 
+    /// <summary>
+    /// Invoked when a new tracking item comes into frame.
+    /// </summary>
+    /// <param name="previousStatus"></param>
+    /// <param name="newStatus"></param>
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
-        
         if (GameManager.Instance.gameStarted)
         {
             if (newStatus == TrackableBehaviour.Status.TRACKED)
