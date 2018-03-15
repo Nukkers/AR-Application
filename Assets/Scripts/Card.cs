@@ -4,12 +4,23 @@ using UnityEngine;
 using Vuforia;
 
 /// <summary>
+/// Enumerated cards, way nicer to work with than bare integers
+/// </summary>
+public enum CardType
+{
+    Tiger,
+    Tree,
+    Plane,
+    Car
+}
+
+/// <summary>
 /// Represents the game logic of a card.
 /// </summary>
 public class Card : MonoBehaviour, ITrackableEventHandler
 {
-    public int cardID;
-    public int cardType; // TODO : Make me an enum.
+    public int pairID;
+    public CardType cardType; // TODO : Make me an enum.
     public AudioClip audioCue;
     public bool matched = false;
     private TrackableBehaviour mTrackableBehaviour;
