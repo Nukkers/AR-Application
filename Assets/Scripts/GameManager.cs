@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public List<Card> visibleCardList;
     public int score = 0;
 
+    public GameObject matchedParticleSystemPrefab;
     /* Singleton implementation */
     private static GameManager mInstance; // Instance of the GameManager object - managed by the singleton accessors (see below)
     public static GameManager Instance
@@ -81,19 +82,46 @@ public class GameManager : MonoBehaviour
     // add a list of keeping to keeping track of visible cards
     public void CardTracked(Card card)
     {
-        visibleCardList.Add(card);
-        Debug.Log("Tracking card :" + card.name);
-
-        if (visibleCardList.Count > 1)
+        /* Only perform further checks if the card hasn't already been matched against */
+        if (card.matched == false)
         {
-            if (visibleCardList[visibleCardList.Count - 1].cardType == visibleCardList[visibleCardList.Count - 2].cardType)
-            {
-                score++;
-                visibleCardList[visibleCardList.Count - 1].matched = true;
-                visibleCardList[visibleCardList.Count - 2].matched = true;
-                Debug.Log("Card pair matched! Type: " + card.cardType);
-            }
+            visibleCardList.Add(card); // Add the card to the list of cards being tracked for matchings
+            Debug.Log("Tracking card :" + card.name);
 
+            /* If more than one unmatched card is visible we should perform a check to see if they're a pair */
+            if (visibleCardList.Count > 1)
+            {
+                /* Iterate through all visisble cards, checking for a match against the one that just came into view */
+                Card otherCard = null;
+                foreach (var cardToCheck in visibleCardList)
+                {
+                    /* Perform the check - check both card type and the pairID (pairID is for future proofing only at this point) */
+                    if ((card.cardType == cardToCheck.cardType) && (card.pairID == cardToCheck.pairID)) {
+                        otherCard = cardToCheck;
+                        break;
+                    }
+                }
+                
+                /* If otherCard is non-null we can presume we have a match and continue with the match handling logic */
+                if (otherCard != null) 
+                {
+                    score++; // Increment the score
+                    card.matched = true; // Stop that card from being matched in the future
+                    otherCard.matched = true; // Stop that card from being matched in the future
+                    
+                    /* Instantiate the matched particle FX */
+                    Instantiate(matchedParticleSystemPrefab, card.transform);
+                    Instantiate(matchedParticleSystemPrefab, otherCard.transform);
+
+                    /* Remove the cards from the tracked list, we have no need to keep track of them anymore */
+                    visibleCardList.Remove(card);
+                    visibleCardList.Remove(otherCard);
+
+                    Debug.Log("Card pair matched! Type: " + card.cardType);
+
+
+                }
+            }
         }
     }
 
