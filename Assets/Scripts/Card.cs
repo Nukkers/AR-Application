@@ -35,9 +35,14 @@ public class Card : MonoBehaviour, ITrackableEventHandler
 
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
-        if (newStatus == TrackableBehaviour.Status.TRACKED)
-            GameManager.Instance.cardTracked(this);
-        else if (newStatus == TrackableBehaviour.Status.NOT_FOUND)
-            GameManager.Instance.cardLost(this);
+        
+        if (GameManager.Instance.gameStarted)
+        {
+            if (newStatus == TrackableBehaviour.Status.TRACKED)
+                        GameManager.Instance.CardTracked(this);
+                    else if (newStatus == TrackableBehaviour.Status.NOT_FOUND)
+                        GameManager.Instance.CardLost(this);
+        }
+        
     }
 }
