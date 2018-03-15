@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
+  pairID: 0
   cardType: 1
   audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
@@ -666,7 +666,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 75e77c890aa94237869cadcb31fabfbb, type: 3}
+        m_Texture: {fileID: 2800000, guid: a86d04e4f8d1496897d8db1bedf0abd5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -819,7 +819,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalScale.x
@@ -984,7 +984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
+  pairID: 0
   cardType: 1
   audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
@@ -1283,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
+  pairID: 0
   cardType: 1
   audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
@@ -1907,7 +1907,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 66474d511c4e472dba90ca73170799c0, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1e2e1cba394846da84b24375b2efa8e1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2109,7 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
+  pairID: 0
   cardType: 1
   audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
@@ -2470,7 +2470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
+  pairID: 0
   cardType: 1
   audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
+  pairID: 0
   cardType: 1
   audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
@@ -3509,7 +3509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
+  pairID: 0
   cardType: 1
   audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
@@ -4003,7 +4003,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: tiger2Material
+  m_Name: tiger1Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -4016,7 +4016,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 183c6ed05ba04b9ab97dc0a57d29518f, type: 3}
+        m_Texture: {fileID: 2800000, guid: aab14672ab4d4397907479ad2b190696, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -4567,7 +4567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
+  pairID: 0
   cardType: 1
   audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
@@ -4696,7 +4696,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalScale.x
@@ -5015,7 +5015,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4147040968636970, guid: 6e215d7d1e696624dbc125ac6a596420, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.663033
+      value: -8.47
       objectReference: {fileID: 0}
     - target: {fileID: 4147040968636970, guid: 6e215d7d1e696624dbc125ac6a596420, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5166,6 +5166,7 @@ MonoBehaviour:
   gameStarted: 0
   visibleCardList: []
   score: 0
+  matchedParticleSystemPrefab: {fileID: 0}
 --- !u!114 &2146897091
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,8 +24,11 @@ public class Card : MonoBehaviour, ITrackableEventHandler
     public AudioClip audioCue;
     public bool matched = false;
     private TrackableBehaviour mTrackableBehaviour;
+
+    public GameObject outlinePrefab;
     // Use this for initialization
     void Start () {
+        Instantiate(outlinePrefab, this.transform);
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
         {

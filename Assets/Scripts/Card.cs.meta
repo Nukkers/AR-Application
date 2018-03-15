@@ -1,11 +1,14 @@
 fileFormatVersion: 2
 guid: f94dba6523a6654448f5e27e1ff7b2a8
-timeCreated: 1520526206
+timeCreated: 1521114191
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - audioCue: {instanceID: 0}
+  - outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
