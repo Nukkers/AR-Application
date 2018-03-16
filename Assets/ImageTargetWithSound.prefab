@@ -10397,10 +10397,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
+  pairID: 0
   cardType: 1
   audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
+  outlinePrefab: {fileID: 0}
 --- !u!114 &114810800331459856
 MonoBehaviour:
   m_ObjectHideFlags: 1
