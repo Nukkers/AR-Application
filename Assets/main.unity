@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -387,8 +387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &183229311
@@ -986,10 +986,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
-  outlinePrefab: {fileID: 0}
+  outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+    type: 2}
 --- !u!33 &476793904
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1286,10 +1287,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
-  outlinePrefab: {fileID: 0}
+  outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+    type: 2}
 --- !u!33 &545339783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2113,8 +2115,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &837845231
@@ -2427,7 +2429,6 @@ GameObject:
   - component: {fileID: 998683855}
   - component: {fileID: 998683854}
   - component: {fileID: 998683853}
-  - component: {fileID: 998683860}
   m_Layer: 0
   m_Name: ImageTarget_Tiger1
   m_TagString: Untagged
@@ -2476,10 +2477,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
-  outlinePrefab: {fileID: 0}
+  outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+    type: 2}
 --- !u!33 &998683855
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2568,18 +2570,6 @@ MonoBehaviour:
   mImageTargetType: 0
   mWidth: 1
   mHeight: 0.833333
---- !u!114 &998683860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 998683851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d4eb8ae4df6db048b972caaeca6d651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modelTransform: {fileID: 1875445384}
 --- !u!1 &1002280528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,8 +2971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &1059714329
@@ -3529,10 +3519,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
-  outlinePrefab: {fileID: 0}
+  outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+    type: 2}
 --- !u!33 &1280685896
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4023,7 +4014,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: tiger1Material
+  m_Name: tiger2Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -4036,7 +4027,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: aab14672ab4d4397907479ad2b190696, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0f2ce48cfaf541a7ba89d6273056d467, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -4588,10 +4579,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
-  outlinePrefab: {fileID: 0}
+  outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+    type: 2}
 --- !u!33 &1859903283
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5054,13 +5046,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2146897084}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db88a0f3a5c154145a75444ac4f54dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mCamera: {fileID: 2146897088}
-  lookAtDuration: 0
+  lookAtDuration: 2
   targetReticle: {fileID: 0}
 --- !u!114 &2146897086
 MonoBehaviour:
@@ -5145,7 +5137,8 @@ MonoBehaviour:
   gameStarted: 0
   visibleCardList: []
   score: 0
-  matchedParticleSystemPrefab: {fileID: 0}
+  matchedParticleSystemPrefab: {fileID: 1147686553805272, guid: 6e215d7d1e696624dbc125ac6a596420,
+    type: 2}
 --- !u!114 &2146897091
 MonoBehaviour:
   m_ObjectHideFlags: 0
