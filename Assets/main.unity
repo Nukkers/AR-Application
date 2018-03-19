@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 183229307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.26, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.402597, y: 1.402597, z: 1.402597}
   m_Children:
   - {fileID: 1654053958}
   m_Father: {fileID: 416673048}
@@ -473,12 +473,12 @@ MonoBehaviour:
   mTrackableName: car1
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Test_DB.xml
+  mDataSetPath: Vuforia/DBv3.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.833333
+  mAspectRatio: 1.402597
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.833333
+  mHeight: 1.402597
 --- !u!1001 &257965872
 Prefab:
   m_ObjectHideFlags: 0
@@ -667,7 +667,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a86d04e4f8d1496897d8db1bedf0abd5, type: 3}
+        m_Texture: {fileID: 2800000, guid: ab69110724f54fe88787bbb55b4af603, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -808,19 +808,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalScale.x
@@ -840,7 +840,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
@@ -954,7 +954,7 @@ Transform:
   m_GameObject: {fileID: 476793900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.547, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.402597, y: 1.402597, z: 1.402597}
   m_Children:
   - {fileID: 257965873}
   m_Father: {fileID: 416673048}
@@ -1073,12 +1073,12 @@ MonoBehaviour:
   mTrackableName: tree1
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Test_DB.xml
+  mDataSetPath: Vuforia/DBv3.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.833333
+  mAspectRatio: 1.402597
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.833333
+  mHeight: 1.402597
 --- !u!1 &493068592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1255,7 @@ Transform:
   m_GameObject: {fileID: 545339779}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.97, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.402597, y: 1.402597, z: 1.402597}
   m_Children:
   - {fileID: 1539351802}
   m_Father: {fileID: 416673048}
@@ -1374,12 +1374,12 @@ MonoBehaviour:
   mTrackableName: tree2
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Test_DB.xml
+  mDataSetPath: Vuforia/DBv3.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.833333
+  mAspectRatio: 1.402597
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.833333
+  mHeight: 1.402597
 --- !u!1 &546396130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1549,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1557,7 +1557,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_RootOrder
@@ -1577,7 +1577,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
@@ -1912,7 +1912,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1e2e1cba394846da84b24375b2efa8e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2bb1621be2e6475db9603d0b8c6492d7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2083,7 +2083,7 @@ Transform:
   m_GameObject: {fileID: 837845227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.21, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.402597, y: 1.402597, z: 1.402597}
   m_Children:
   - {fileID: 1489276998}
   m_Father: {fileID: 416673048}
@@ -2201,12 +2201,12 @@ MonoBehaviour:
   mTrackableName: car2
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Test_DB.xml
+  mDataSetPath: Vuforia/DBv3.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.833333
+  mAspectRatio: 1.402597
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.833333
+  mHeight: 1.402597
 --- !u!1001 &862241812
 Prefab:
   m_ObjectHideFlags: 0
@@ -2232,15 +2232,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_RootOrder
@@ -2260,7 +2260,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
@@ -2445,7 +2445,7 @@ Transform:
   m_GameObject: {fileID: 998683851}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.5280447, y: 0, z: 3.01}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.402597, y: 1.402597, z: 1.402597}
   m_Children:
   - {fileID: 1875445384}
   m_Father: {fileID: 416673048}
@@ -2564,12 +2564,12 @@ MonoBehaviour:
   mTrackableName: tiger1
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Test_DB.xml
+  mDataSetPath: Vuforia/DBv3.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.833333
+  mAspectRatio: 1.402597
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.833333
+  mHeight: 1.402597
 --- !u!1 &1002280528
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,7 +2720,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.4166665}
+      m_Extent: {x: 0.35648158, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -2773,7 +2773,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000005055d5be00000000ffff7f3f000000000000000000000000000000bf000000005055d53e00000000ffff7f3f00000000000000000000803f0000003f000000005055d5be00000000ffff7f3f000000000000803f000000000000003f000000005055d53e00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: c184b6be00000000000000bf00000000ffff7f3f000000000000000000000000c184b6be000000000000003f00000000ffff7f3f00000000000000000000803fc184b63e00000000000000bf00000000ffff7f3f000000000000803f00000000c184b63e000000000000003f00000000ffff7f3f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -2939,7 +2939,7 @@ Transform:
   m_GameObject: {fileID: 1059714325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.27, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.402597, y: 1.402597, z: 1.402597}
   m_Children:
   - {fileID: 862241813}
   m_Father: {fileID: 416673048}
@@ -3057,12 +3057,12 @@ MonoBehaviour:
   mTrackableName: plane2
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Test_DB.xml
+  mDataSetPath: Vuforia/DBv3.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.833333
+  mAspectRatio: 1.402597
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.833333
+  mHeight: 1.402597
 --- !u!43 &1063759962
 Mesh:
   m_ObjectHideFlags: 0
@@ -3080,7 +3080,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.4166665}
+      m_Extent: {x: 0.35648158, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -3133,7 +3133,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000005055d5be00000000ffff7f3f000000000000000000000000000000bf000000005055d53e00000000ffff7f3f00000000000000000000803f0000003f000000005055d5be00000000ffff7f3f000000000000803f000000000000003f000000005055d53e00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: c184b6be00000000000000bf00000000ffff7f3f000000000000000000000000c184b6be000000000000003f00000000ffff7f3f00000000000000000000803fc184b63e00000000000000bf00000000ffff7f3f000000000000803f00000000c184b63e000000000000003f00000000ffff7f3f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -3487,7 +3487,7 @@ Transform:
   m_GameObject: {fileID: 1280685892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.53, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.402597, y: 1.402597, z: 1.402597}
   m_Children:
   - {fileID: 670715644}
   m_Father: {fileID: 416673048}
@@ -3606,12 +3606,12 @@ MonoBehaviour:
   mTrackableName: plane1
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Test_DB.xml
+  mDataSetPath: Vuforia/DBv3.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.833333
+  mAspectRatio: 1.402597
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.833333
+  mHeight: 1.402597
 --- !u!1 &1300372025
 GameObject:
   m_ObjectHideFlags: 0
@@ -3913,15 +3913,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_RootOrder
@@ -3941,7 +3941,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
@@ -4027,7 +4027,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0f2ce48cfaf541a7ba89d6273056d467, type: 3}
+        m_Texture: {fileID: 2800000, guid: c9b0fa464b684747997f197f4963e9e3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -4203,7 +4203,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4211,7 +4211,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_RootOrder
@@ -4231,7 +4231,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e33c734676d56ca49a5beaa56645a058, type: 3}
@@ -4402,7 +4402,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.4166665}
+      m_Extent: {x: 0.35648158, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -4455,7 +4455,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf000000005055d5be00000000ffff7f3f000000000000000000000000000000bf000000005055d53e00000000ffff7f3f00000000000000000000803f0000003f000000005055d5be00000000ffff7f3f000000000000803f000000000000003f000000005055d53e00000000ffff7f3f000000000000803f0000803f
+    _typelessdata: c184b6be00000000000000bf00000000ffff7f3f000000000000000000000000c184b6be000000000000003f00000000ffff7f3f00000000000000000000803fc184b63e00000000000000bf00000000ffff7f3f000000000000803f00000000c184b63e000000000000003f00000000ffff7f3f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -4547,7 +4547,7 @@ Transform:
   m_GameObject: {fileID: 1859903279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.45790863, y: 0, z: 1.715}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.402597, y: 1.402597, z: 1.402597}
   m_Children:
   - {fileID: 439426733}
   m_Father: {fileID: 416673048}
@@ -4666,12 +4666,12 @@ MonoBehaviour:
   mTrackableName: tiger2
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Test_DB.xml
+  mDataSetPath: Vuforia/DBv3.xml
   mExtendedTracking: 0
-  mAspectRatio: 0.833333
+  mAspectRatio: 1.402597
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.833333
+  mHeight: 1.402597
 --- !u!1001 &1875445383
 Prefab:
   m_ObjectHideFlags: 0
@@ -4697,7 +4697,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4705,11 +4705,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalScale.x
@@ -4729,7 +4729,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
