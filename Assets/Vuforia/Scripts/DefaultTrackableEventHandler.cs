@@ -14,6 +14,13 @@ using Vuforia;
 /// </summary>
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
+    public Transform modelToTransform;
+    Vector3 defaultSize;
+    bool mTracked;
+    Vector3 modelGrowSpeed = new Vector3(3f,3f,3f);
+
+
+
     #region PRIVATE_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
@@ -27,6 +34,17 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+
+        //Get default size for model
+        defaultSize = modelToTransform.transform.localScale;
+
+    }
+
+    void Update()
+    {
+        //If tracked and not at full size, scale up
+        if (mTracked && (modelToTransform.transform.localScale.sqrMagnitude < defaultSize.sqrMagnitude))
+            modelToTransform.transform.localScale += Time.deltaTime * modelGrowSpeed;
     }
 
     #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -84,6 +102,14 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Enable canvas':
         foreach (var component in canvasComponents)
             component.enabled = true;
+
+        //If not yet tracked, make model tiny
+        if (!mTracked)
+            modelToTransform.transform.localScale = new Vector3(0f, 0f, 0f);
+        
+        //Set tracked true
+        mTracked = true;
+
     }
 
 
@@ -104,6 +130,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         // Disable canvas':
         foreach (var component in canvasComponents)
             component.enabled = false;
+
+        //Set tracked false
+        mTracked = false;
+
     }
 
     #endregion // PRIVATE_METHODS
