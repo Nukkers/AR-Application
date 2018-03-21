@@ -39,9 +39,9 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // don't track the images when the application is opened
-        Debug.Log("Tracking stopped");
-        TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+       //// don't track the images when the application is opened
+       //Debug.Log("Tracking stopped");
+       //TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
 
     }
 
