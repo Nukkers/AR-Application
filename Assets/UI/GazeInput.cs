@@ -14,6 +14,7 @@ public class GazeInput : MonoBehaviour
     PointerEventData m_PointerEventData;
     EventSystem m_EventSystem;
     Button lastSelected = null;
+    bool mHasSelectedObject = false;
     void Start()
     {
         //Fetch the Raycaster from the GameObject (the Canvas)
@@ -54,11 +55,18 @@ public class GazeInput : MonoBehaviour
             Button obj = result.gameObject.GetComponent<Button>(); // Surely there's a better way?
             if (obj != null)
             {
+                /* Handle deselections */
                 if (obj != lastSelected && lastSelected != null)
+                {
                     lastSelected.OnDeselect(null);
-
-                obj.OnSelect(null);
-                lastSelected = obj;
+                    mHasSelectedObject = false;
+                }
+                if (!mHasSelectedObject)
+                {
+                    obj.OnSelect(null);
+                    lastSelected = obj;
+                    mHasSelectedObject = true;
+                }
                 break;
             }
         }
