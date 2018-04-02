@@ -26,11 +26,30 @@ using UnityEngine.UI;
 
 public class ExampleStreaming : MonoBehaviour
 {
-    private string _username = null;
-    private string _password = null;
-    private string _url = null;
-    
-    public Text ResultsField;
+    const string _username = "d96273f1-d789-4615-a98e-c6d9835d576c";
+    const string _password = "Ydu7ifGnKUjI";
+    const string _url = "https://stream.watsonplatform.net/speech-to-text/api";
+
+    [Header("Settings")]
+    [Tooltip("Disable speech recognition if not needed to prevent unneccesary use of cloud allowance")]
+    public bool Enabled = false;    //Allow switch off to preserve cloud allowance
+
+    [Tooltip("Keywords being detected. If changing, amend code to trigger required functions.")]
+    public string[] keywords = { "start", "quit", "test"};  //Keywords to watch for
+
+    [Tooltip("Tolerance to recognise keyword - too low will cause false recognitions, too high will miss recognitions. Default 0.2f.")]
+    [Range(0.0f, 1.0f)]
+    public float keywordConfidence = 0.2f; //Confidence - low due to uniqueness of words
+
+    [Header("Debugging")]
+
+    [Tooltip("Print all recognition to console if enabled.")]
+    public bool DebugMode = false;    //Switches on console logging for all recognition
+
+    [Tooltip("Text field for recognition result to be displayed")]
+    public Text ResultsField;   //Where output will be displayed - for debugging
+    [Tooltip("UI overlay for debugging")]
+    public GameObject ResultsDisplay; //Display UI
 
     private int _recordingRoutine = 0;
     private string _microphoneID = null;
@@ -43,6 +62,8 @@ public class ExampleStreaming : MonoBehaviour
     void Start()
     {
         LogSystem.InstallDefaultReactors();
+        ResultsDisplay.SetActive(DebugMode);
+
 
         //  Create credential and instantiate service
         Credentials credentials = new Credentials(_username, _password, _url);
@@ -58,20 +79,23 @@ public class ExampleStreaming : MonoBehaviour
         get { return _speechToText.IsListening; }
         set
         {
-            if (value && !_speechToText.IsListening)
+            if (value && !_speechToText.IsListening && Enabled)
             {
+                _speechToText.RecognizeModel = "en-GB_BroadbandModel";
                 _speechToText.DetectSilence = true;
                 _speechToText.EnableWordConfidence = true;
                 _speechToText.EnableTimestamps = true;
                 _speechToText.SilenceThreshold = 0.01f;
                 _speechToText.MaxAlternatives = 0;
-                _speechToText.EnableInterimResults = true;
+                _speechToText.EnableInterimResults = false;
                 _speechToText.OnError = OnError;
                 _speechToText.InactivityTimeout = -1;
                 _speechToText.ProfanityFilter = false;
                 _speechToText.SmartFormatting = true;
                 _speechToText.SpeakerLabels = false;
                 _speechToText.WordAlternativesThreshold = null;
+                _speechToText.Keywords = keywords;          
+                _speechToText.KeywordsThreshold = keywordConfidence;
                 _speechToText.StartListening(OnRecognize, OnRecognizeSpeaker);
             }
             else if (!value && _speechToText.IsListening)
@@ -109,7 +133,10 @@ public class ExampleStreaming : MonoBehaviour
 
     private IEnumerator RecordingHandler()
     {
-        Log.Debug("ExampleStreaming.RecordingHandler()", "devices: {0}", Microphone.devices);
+        if (DebugMode)
+        {
+            Log.Debug("ExampleStreaming.RecordingHandler()", "devices: {0}", Microphone.devices);
+        }
         _recording = Microphone.Start(_microphoneID, true, _recordingBufferSize, _recordingHZ);
         yield return null;      // let _recordingRoutine get set..
 
@@ -128,7 +155,10 @@ public class ExampleStreaming : MonoBehaviour
             int writePos = Microphone.GetPosition(_microphoneID);
             if (writePos > _recording.samples || !Microphone.IsRecording(_microphoneID))
             {
-                Log.Error("ExampleStreaming.RecordingHandler()", "Microphone disconnected.");
+                if (DebugMode)
+                {
+                    Log.Error("ExampleStreaming.RecordingHandler()", "Microphone disconnected.");
+                }
 
                 StopRecording();
                 yield break;
@@ -159,7 +189,6 @@ public class ExampleStreaming : MonoBehaviour
 
                 yield return new WaitForSeconds(timeRemaining);
             }
-
         }
 
         yield break;
@@ -174,7 +203,11 @@ public class ExampleStreaming : MonoBehaviour
                 foreach (var alt in res.alternatives)
                 {
                     string text = string.Format("{0} ({1}, {2:0.00})\n", alt.transcript, res.final ? "Final" : "Interim", alt.confidence);
-                    Log.Debug("ExampleStreaming.OnRecognize()", text);
+                    if (DebugMode)
+                    {
+                        Log.Debug("ExampleStreaming.OnRecognize()", text);
+                    }
+
                     ResultsField.text = text;
                 }
 
@@ -182,7 +215,29 @@ public class ExampleStreaming : MonoBehaviour
                 {
                     foreach (var keyword in res.keywords_result.keyword)
                     {
-                        Log.Debug("ExampleStreaming.OnRecognize()", "keyword: {0}, confidence: {1}, start time: {2}, end time: {3}", keyword.normalized_text, keyword.confidence, keyword.start_time, keyword.end_time);
+                        if (DebugMode)
+                        {
+                            Log.Debug("ExampleStreaming.OnRecognize()", "keyword: {0}, confidence: {1}, start time: {2}, end time: {3}", keyword.normalized_text, keyword.confidence, keyword.start_time, keyword.end_time);
+                        }
+
+                        ResultsField.text = "Keyword Recognised: " + keyword.normalized_text;
+
+                        //Do things based on keyword
+                        if (keyword.normalized_text.Equals("start"))
+                        {
+                            //start game function call here
+                            Debug.Log("Start recognised - function called!");
+                        }
+                        if (keyword.normalized_text.Equals("quit"))
+                        {
+                            //end game function here
+                            Debug.Log("Quit game recognised - function called!");
+                        }
+                        if (keyword.normalized_text.Equals("test"))
+                        {
+                            //test game function here
+                            Debug.Log("Test recognised - function called!");
+                        }
                     }
                 }
 
@@ -190,9 +245,12 @@ public class ExampleStreaming : MonoBehaviour
                 {
                     foreach (var wordAlternative in res.word_alternatives)
                     {
-                        Log.Debug("ExampleStreaming.OnRecognize()", "Word alternatives found. Start time: {0} | EndTime: {1}", wordAlternative.start_time, wordAlternative.end_time);
-                        foreach(var alternative in wordAlternative.alternatives)
-                            Log.Debug("ExampleStreaming.OnRecognize()", "\t word: {0} | confidence: {1}", alternative.word, alternative.confidence);
+                        if (DebugMode)
+                        {
+                            Log.Debug("ExampleStreaming.OnRecognize()", "Word alternatives found. Start time: {0} | EndTime: {1}", wordAlternative.start_time, wordAlternative.end_time);
+                            foreach (var alternative in wordAlternative.alternatives)
+                                Log.Debug("ExampleStreaming.OnRecognize()", "\t word: {0} | confidence: {1}", alternative.word, alternative.confidence);
+                        }
                     }
                 }
             }
@@ -201,7 +259,7 @@ public class ExampleStreaming : MonoBehaviour
 
     private void OnRecognizeSpeaker(SpeakerRecognitionEvent result)
     {
-        if (result != null)
+        if (result != null && DebugMode)
         {
             foreach (SpeakerLabelsResult labelResult in result.speaker_labels)
             {
