@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 114566311246665586}
   - component: {fileID: 114009046538812400}
   - component: {fileID: 65632703800595938}
+  - component: {fileID: 114705218531410108}
   m_Layer: 5
   m_Name: MainScreenWidget
   m_TagString: Untagged
@@ -251,7 +252,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 566b29910d2ef9242ae3abeedb125db1, type: 3}
+    m_Font: {fileID: 12800000, guid: 7422c0817942b994984b60852c324b60, type: 3}
     m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
@@ -365,7 +366,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114388517499567898}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114705218531410108}
+        m_MethodName: OnSettingsClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114388517499567898
@@ -448,7 +460,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 566b29910d2ef9242ae3abeedb125db1, type: 3}
+    m_Font: {fileID: 12800000, guid: 7422c0817942b994984b60852c324b60, type: 3}
     m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
@@ -514,7 +526,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 566b29910d2ef9242ae3abeedb125db1, type: 3}
+    m_Font: {fileID: 12800000, guid: 7422c0817942b994984b60852c324b60, type: 3}
     m_FontSize: 46
     m_FontStyle: 0
     m_BestFit: 0
@@ -616,6 +628,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114705218531410108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1909391666092764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c05b63c47573649803e0d0daa0b250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114749196313852152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -763,7 +786,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1909391666092764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 8}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 0.02, y: 0.02, z: 1}
   m_Children:
   - {fileID: 224428127202222088}
