@@ -80,8 +80,13 @@ public class GazeInput : MonoBehaviour
             }
         }
         /* TODO : Make this less mobile specific */
-        //if (Input.GetTouch(0).phase == TouchPhase.Began && lastSelected != null)
-        //    lastSelected.OnPointerClick(null);
+        bool hasClicked = false;
+        //Touch _touch = Input.GetTouch(0);
+        if (Input.GetMouseButtonDown(0))
+            hasClicked = true;
+
+        if (hasClicked && lastSelected != null)
+            lastSelected.OnPointerClick(m_PointerEventData);
 
     }
 
