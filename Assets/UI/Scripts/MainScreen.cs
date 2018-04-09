@@ -17,5 +17,6 @@ public class MainScreen : MonoBehaviour {
     public void OnSettingsClicked()
     {
         Debug.Log("OnSettingsClicked hit!");
+        UIManager.instance.DisplaySettingsScreen();
     }
 }
