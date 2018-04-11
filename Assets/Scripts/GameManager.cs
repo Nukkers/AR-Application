@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     public int maxNUmberOfPairs = 1; // maximum number of pairs within the game 
     public GameObject matchedParticleSystemPrefab;
+    public GameObject cardOutlinePrefab; // Retrieved by the cards as needed, saves assigning it manually to each card type.
     /* Singleton implementation */
     private static GameManager mInstance; // Instance of the GameManager object - managed by the singleton accessors (see below)
     public static GameManager Instance

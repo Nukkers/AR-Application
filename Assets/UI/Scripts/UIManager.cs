@@ -33,8 +33,9 @@ public class UIManager : MonoBehaviour
         get
         {
             if (!mInstance)
-                new GameObject("UI Manager");
-
+            {
+                mInstance = new UIManager();
+            }
             return mInstance;
         }
     }
