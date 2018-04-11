@@ -28,12 +28,8 @@ public class GameManager : MonoBehaviour
 
         get
         {
-            if (!mInstance) // Initialize the singleton.
-            {
-                mInstance = new GameManager();
-                GameObject instanceObject = new GameObject();
-                mInstance = instanceObject.AddComponent<GameManager>();
-            }
+            if (!mInstance) // Initialize the singleton
+               Instantiate(Resources.Load("GameManager")); // Not the most performant call, but it should only ever be called once (if at all)
             return mInstance;
         }
     }
@@ -41,6 +37,12 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        /* Set mInstance to this instance of the class if null, otherwise kill the object */
+        if (mInstance == null)
+            mInstance = this;
+        else
+            Destroy(this);
+
         //// don't track the images when the application is opened
         //Debug.Log("Tracking stopped");
         //TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            
+
     }
 
     // Starts the game and initialises the necessary variables (triggered by clicking start game button)
@@ -60,7 +62,6 @@ public class GameManager : MonoBehaviour
     {
         gameStarted = true;
         Debug.Log("Starting a new instance of the gamemanager class");
-        mInstance = this;
         TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
     }
 
@@ -80,7 +81,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("End of app triggered");
             Application.Quit();
         }
-        
+
     }
 
     // add a list of keeping to keeping track of visible cards
@@ -100,19 +101,20 @@ public class GameManager : MonoBehaviour
                 foreach (var cardToCheck in visibleCardList)
                 {
                     /* Perform the check - check both card type and the pairID (pairID is for future proofing only at this point) */
-                    if ((card.cardType == cardToCheck.cardType) && (card.pairID == cardToCheck.pairID)) {
+                    if ((card.cardType == cardToCheck.cardType) && (card.pairID == cardToCheck.pairID))
+                    {
                         otherCard = cardToCheck;
                         break;
                     }
                 }
-                
+
                 /* If otherCard is non-null we can presume we have a match and continue with the match handling logic */
-                if (otherCard != null) 
+                if (otherCard != null)
                 {
                     score++; // Increment the score
                     card.matched = true; // Stop that card from being matched in the future
                     otherCard.matched = true; // Stop that card from being matched in the future
-                    
+
                     /* Instantiate the matched particle FX */
                     GameObject fx = Instantiate(matchedParticleSystemPrefab, card.transform);
                     fx.transform.RotateAroundLocal(Vector3.left, -90); // Deprecated, replace me.
@@ -128,7 +130,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            if(score == maxNUmberOfPairs)
+            if (score == maxNUmberOfPairs)
             {
                 MultipleRounds();
             }
