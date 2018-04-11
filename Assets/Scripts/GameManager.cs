@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public List<Card> visibleCardList;
     public int score = 0;
 
+    public int maxNUmberOfPairs = 1; // maximum number of pairs within the game 
     public GameObject matchedParticleSystemPrefab;
     /* Singleton implementation */
     private static GameManager mInstance; // Instance of the GameManager object - managed by the singleton accessors (see below)
@@ -39,10 +40,12 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       //// don't track the images when the application is opened
-       //Debug.Log("Tracking stopped");
-       //TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
-
+        //// don't track the images when the application is opened
+        //Debug.Log("Tracking stopped");
+        //TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        Debug.Log("Inside start func");
+        visibleCardList = new List<Card>();
+        gameStarted = true;
     }
 
     // Update is called once per frame
@@ -121,8 +124,12 @@ public class GameManager : MonoBehaviour
 
                     Debug.Log("Card pair matched! Type: " + card.cardType);
 
-
                 }
+            }
+
+            if(score == maxNUmberOfPairs)
+            {
+                MultipleRounds();
             }
         }
     }
@@ -132,4 +139,17 @@ public class GameManager : MonoBehaviour
         visibleCardList.Remove(card);
         Debug.Log("Lost card :" + card.name);
     }
+
+    public void MultipleRounds()
+    {
+        Debug.Log("New game is being started");
+        var cardsFound = FindObjectsOfType<Card>();
+        Debug.Log(cardsFound + " : " + cardsFound.Length);
+        foreach (var cards in cardsFound)
+        {
+            cards.matched = false;
+        }
+        NewGame();
+    }
+
 }
