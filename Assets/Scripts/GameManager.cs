@@ -60,12 +60,15 @@ public class GameManager : MonoBehaviour
 
         //// don't track the images when the application is opened
         Debug.Log("Tracking stopped");
-        TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        
         Debug.Log("Inside start func");
         visibleCardList = new List<Card>();
     }
 
-
+    private void Start()
+    {
+        TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+    }
     // Update is called once per frame
     void Update()
     {
