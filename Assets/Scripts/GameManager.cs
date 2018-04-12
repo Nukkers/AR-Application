@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     public int score = 0;
 
     public int maxNumberOfPairs = 1; // maximum number of pairs within the game 
-    public string cardOutlinePrefabName = "cardOutline";
-    public string matchedParticleFXName = "cardMatchFX";
+    public string cardOutlinePrefabName = "cardOutlineSprite";
+    public string matchedParticleFXName = "CardMatchParticles";
     public GameObject matchedParticleSystemPrefab;
     public GameObject cardOutlinePrefab; // Retrieved by the cards as needed, saves assigning it manually to each card type.
     /* Singleton implementation */
