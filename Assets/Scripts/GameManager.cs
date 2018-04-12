@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public Text endOfRoundText = GameObject.Find("NewRoundText").GetComponentInChildren<UnityEngine.UI.Text>();
     public int maxNumberOfPairs = 1; // maximum number of pairs within the game 
-    public string cardOutlinePrefabName = "cardOutline";
-    public string matchedParticleFXName = "cardMatchFX";
+    public string cardOutlinePrefabName = "cardOutlineSprite";
+    public string matchedParticleFXName = "CardMatchParticles";
     public GameObject matchedParticleSystemPrefab;
     public GameObject cardOutlinePrefab; // Retrieved by the cards as needed, saves assigning it manually to each card type.
     /* Singleton implementation */
@@ -48,15 +48,18 @@ public class GameManager : MonoBehaviour
     /// </summary>
     void Initialize()
     {
-        /* Preload prefabs from resource name */
-        cardOutlinePrefab = (GameObject)Resources.Load(cardOutlinePrefabName);
-        matchedParticleSystemPrefab = (GameObject)Resources.Load(matchedParticleFXName);
-
         /* Set mInstance to this instance of the class if null, otherwise kill the object */
         if (mInstance == null)
             mInstance = this;
         else
             Destroy(this);
+
+        /* Preload prefabs from resource name */
+        cardOutlinePrefab = (GameObject)Resources.Load(cardOutlinePrefabName);
+        matchedParticleSystemPrefab = (GameObject)Resources.Load(matchedParticleFXName);
+
+        if (!gameStarted)
+            UIManager.Instance.SetDisplayMode(UIState.MainMenu);
 
         //// don't track the images when the application is opened
         Debug.Log("Tracking stopped");
@@ -168,6 +171,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Lost card :" + card.name);
     }
 
+<<<<<<< HEAD
+
+    public void SetModelSize(float size)
+    {
+        this.transform.localScale = new Vector3(size, size, size);
+    }
+=======
     public void MultipleRounds()
     {
         endOfRoundText.text = "End of round";
@@ -183,4 +193,5 @@ public class GameManager : MonoBehaviour
 
     }
 
+>>>>>>> origin/master
 }
