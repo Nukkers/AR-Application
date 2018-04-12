@@ -18,6 +18,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     Vector3 defaultSize;
     bool mTracked;
     Vector3 modelGrowSpeed = new Vector3(3f,3f,3f);
+   // Card aCard;
 
 
 

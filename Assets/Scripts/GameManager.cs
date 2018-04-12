@@ -14,13 +14,14 @@ public class GameManager : MonoBehaviour
     public delegate void CardMatchEventHandler(object sender, object args);
     public event CardMatchEventHandler cardEvent;
 
-    public bool gameStarted = false;
+    public bool gameStarted = true;
     public List<Card> visibleCardList;
     public int score = 0;
 
     public GameObject matchedParticleSystemPrefab;
     /* Singleton implementation */
     private static GameManager mInstance; // Instance of the GameManager object - managed by the singleton accessors (see below)
+    private UnityEngine.UI.Text scoreText;
     public static GameManager Instance
     {
 
@@ -39,16 +40,20 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-       //// don't track the images when the application is opened
-       //Debug.Log("Tracking stopped");
-       //TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        visibleCardList = new List<Card>();
+        NewGame();
+        scoreText = GameObject.Find("Score").GetComponentInChildren<UnityEngine.UI.Text>();
+        scoreText.text = score.ToString();
+        //// don't track the images when the application is opened
+        //Debug.Log("Tracking stopped");
+        //TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-            
+
     }
 
     // Starts the game and initialises the necessary variables (triggered by clicking start game button)
@@ -76,7 +81,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("End of app triggered");
             Application.Quit();
         }
-        
+
     }
 
     // add a list of keeping to keeping track of visible cards
@@ -96,30 +101,32 @@ public class GameManager : MonoBehaviour
                 foreach (var cardToCheck in visibleCardList)
                 {
                     /* Perform the check - check both card type and the pairID (pairID is for future proofing only at this point) */
-                    if ((card.cardType == cardToCheck.cardType) && (card.pairID == cardToCheck.pairID)) {
+                    if ((card.cardType == cardToCheck.cardType) && (card.pairID == cardToCheck.pairID))
+                    {
                         otherCard = cardToCheck;
                         break;
                     }
                 }
-                
+
                 /* If otherCard is non-null we can presume we have a match and continue with the match handling logic */
-                if (otherCard != null) 
+                if (otherCard != null)
                 {
                     score++; // Increment the score
                     card.matched = true; // Stop that card from being matched in the future
                     otherCard.matched = true; // Stop that card from being matched in the future
-                    
+
                     /* Instantiate the matched particle FX */
-                    GameObject fx = Instantiate(matchedParticleSystemPrefab, card.transform);
-                    fx.transform.RotateAroundLocal(Vector3.left, -90); // Deprecated, replace me.
-                    fx = Instantiate(matchedParticleSystemPrefab, otherCard.transform);
-                    fx.transform.RotateAroundLocal(Vector3.left, -90); // Deprecated, replace me.
+                    //GameObject fx = Instantiate(matchedParticleSystemPrefab, card.transform);
+                    //fx.transform.RotateAroundLocal(Vector3.left, -90); // Deprecated, replace me.
+                    //fx = Instantiate(matchedParticleSystemPrefab, otherCard.transform);
+                    //fx.transform.RotateAroundLocal(Vector3.left, -90); // Deprecated, replace me.
 
                     /* Remove the cards from the tracked list, we have no need to keep track of them anymore */
                     visibleCardList.Remove(card);
                     visibleCardList.Remove(otherCard);
-
+                    scoreText.text=score.ToString();
                     Debug.Log("Card pair matched! Type: " + card.cardType);
+                    Debug.Log("Score:" + score);
 
 
                 }

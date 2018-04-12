@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -243,6 +243,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1611912871}
+  - {fileID: 1880692052}
+  - {fileID: 1481604736}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -325,11 +327,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 1
+  pairID: 3
+  cardType: 3
   audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
-  outlinePrefab: {fileID: 0}
+  outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+    type: 2}
 --- !u!33 &183229311
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -483,7 +486,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: plane1Material
+  m_Name: plane2Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -496,7 +499,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ab69110724f54fe88787bbb55b4af603, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6523bb95de89409ba87d40e142d71673, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -667,7 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
+  pairID: 1
   cardType: 1
   audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
@@ -825,7 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
+  pairID: 1
   cardType: 1
   audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
@@ -1258,11 +1261,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 1
+  pairID: 3
+  cardType: 3
   audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
-  outlinePrefab: {fileID: 0}
+  outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+    type: 2}
 --- !u!33 &837845231
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1414,6 +1418,34 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 38f972539f5f1694db2af567d327b6af, type: 3}
   m_PrefabInternal: {fileID: 862241812}
+--- !u!1 &909036902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 811756183}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 909036903}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &909036903
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 811756183}
+  m_GameObject: {fileID: 909036902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &998683851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,7 +1510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
+  cardType: 0
   audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
   outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
@@ -1765,11 +1797,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 1
+  pairID: 2
+  cardType: 2
   audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
-  outlinePrefab: {fileID: 0}
+  outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+    type: 2}
 --- !u!33 &1059714329
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2052,8 +2085,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 1
+  pairID: 2
+  cardType: 2
   audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
   outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
@@ -2212,6 +2245,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1481604735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1481604736}
+  - component: {fileID: 1481604738}
+  - component: {fileID: 1481604737}
+  m_Layer: 5
+  m_Name: Score
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1481604736
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481604735}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 145512376}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 279, y: 135}
+  m_SizeDelta: {x: 20, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1481604737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481604735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1481604738
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481604735}
 --- !u!1001 &1489276997
 Prefab:
   m_ObjectHideFlags: 0
@@ -2681,7 +2788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
+  cardType: 0
   audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
   outlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
@@ -2845,6 +2952,80 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
   m_PrefabInternal: {fileID: 1875445383}
+--- !u!1 &1880692051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1880692052}
+  - component: {fileID: 1880692054}
+  - component: {fileID: 1880692053}
+  m_Layer: 5
+  m_Name: ScoreLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1880692052
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880692051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 145512376}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 234, y: 135}
+  m_SizeDelta: {x: 40, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1880692053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880692051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Score
+--- !u!222 &1880692054
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880692051}
 --- !u!1 &2146897084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2947,7 +3128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2146897090
 MonoBehaviour:
@@ -2971,7 +3152,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2146897084}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40806b4daa491004a9dbb363cecd93a3, type: 3}
   m_Name: 
