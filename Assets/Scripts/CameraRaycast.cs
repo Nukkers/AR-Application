@@ -35,8 +35,8 @@ public class CameraRaycast : MonoBehaviour
                 {
                     if (!mPlayedAudioCue)
                     {
-                        Debug.Log("Looking at object " + rayHit.transform.name);
-                        Debug.Log("Looked at for: " + mLookAtElapsedTime);
+                        //Debug.Log("Looking at object " + rayHit.transform.name);
+                       // Debug.Log("Looked at for: " + mLookAtElapsedTime);
                         mLookAtElapsedTime += Time.deltaTime; // Increment the time by the delta time (i.e., the time elapsed between frames)
 
                         /* The user has looked at the object for x duration, play the audio cue */
