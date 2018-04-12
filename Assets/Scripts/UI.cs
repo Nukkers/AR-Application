@@ -17,18 +17,18 @@ public class UI : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // disable specific buttons/panels at the start of the game
-        toggle = GameObject.Find("Settings_Panel").GetComponentInChildren<UnityEngine.UI.Toggle>();
-        theBackground = GameObject.Find("Settings_Panel").GetComponentInChildren<UnityEngine.UI.Image>();
-        if (theBackground == null) Debug.Log("Background is null");
-        if (toggle == null) Debug.Log("toggle is null");
-        quitButton = GameObject.Find("QuitCurrent_Button");
-        popUpPanel = GameObject.Find("Popup_Panel");
-        settingsPanel = GameObject.Find("Settings_Panel");
+        //// disable specific buttons/panels at the start of the game
+        //toggle = GameObject.Find("Settings_Panel").GetComponentInChildren<UnityEngine.UI.Toggle>();
+        //theBackground = GameObject.Find("Settings_Panel").GetComponentInChildren<UnityEngine.UI.Image>();
+        //if (theBackground == null) Debug.Log("Background is null");
+        //if (toggle == null) Debug.Log("toggle is null");
+        //quitButton = GameObject.Find("QuitCurrent_Button");
+        //popUpPanel = GameObject.Find("Popup_Panel");
+        //settingsPanel = GameObject.Find("Settings_Panel");
        
-        quitButton.SetActive(false);
-        popUpPanel.SetActive(false);
-        settingsPanel.SetActive(false);
+        //quitButton.SetActive(false);
+        //popUpPanel.SetActive(false);
+        //settingsPanel.SetActive(false);
        
     }
 

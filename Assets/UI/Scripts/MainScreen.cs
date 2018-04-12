@@ -17,6 +17,5 @@ public class MainScreen : MonoBehaviour {
     public void OnSettingsClicked()
     {
         UIManager.instance.SetDisplayMode(UIState.Settings);
-
     }
 }

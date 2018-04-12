@@ -132,4 +132,10 @@ public class GameManager : MonoBehaviour
         visibleCardList.Remove(card);
         Debug.Log("Lost card :" + card.name);
     }
+
+
+    public void SetModelSize(float size)
+    {
+        this.transform.localScale = new Vector3(size, size, size);
+    }
 }

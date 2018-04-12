@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -483,7 +483,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: plane1Material
+  m_Name: plane2Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -496,7 +496,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ab69110724f54fe88787bbb55b4af603, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6523bb95de89409ba87d40e142d71673, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2424,15 +2424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5299c1c838a8c44b49ecc9254704e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enabled: 0
-  keywords:
-  - start
-  - quit
-  - test
-  keywordConfidence: 0.2
-  DebugMode: 1
-  ResultsField: {fileID: 906646053}
-  ResultsDisplay: {fileID: 1454985193}
 --- !u!224 &1308864210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2700,7 +2691,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: tree2Material
+  m_Name: tiger1Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2713,7 +2704,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a621429db27d4a039d0481f1e414e73c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 42b893c3aea54013a7bb7d0114b6c55a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
