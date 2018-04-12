@@ -172,11 +172,19 @@ public class GameManager : MonoBehaviour
         visibleCardList.Remove(card);
         Debug.Log("Lost card :" + card.name);
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 904543e2e9b56c4d33165828aaed88aab0c68658
     public void SetModelSize(float size)
     {
         this.transform.localScale = new Vector3(size, size, size);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 904543e2e9b56c4d33165828aaed88aab0c68658
     public void MultipleRounds()
     {
         endOfRoundText.text = "End of round";
@@ -191,4 +199,8 @@ public class GameManager : MonoBehaviour
         StartGame();
 
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 904543e2e9b56c4d33165828aaed88aab0c68658
 }
