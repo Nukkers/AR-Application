@@ -5,7 +5,11 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - matchedParticleSystemPrefab: {fileID: 1147686553805272, guid: 6e215d7d1e696624dbc125ac6a596420,
+      type: 2}
+  - cardOutlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

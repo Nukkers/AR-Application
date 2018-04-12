@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6e5d65d3cd042f844b715ee9ffb1245f
+timeCreated: 1523286662
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mainScreenPrefab: {fileID: 1909391666092764, guid: 6d73a43c1127506499c060f34be8dcf3,
+      type: 2}
+  - settingsScreenPrefab: {fileID: 1530485644719220, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+      type: 2}
+  - hudPrefab: {fileID: 1292349653661136, guid: 0439d9e3088308c46872b4b10b13b3ad,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

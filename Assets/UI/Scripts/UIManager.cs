@@ -29,13 +29,14 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Singleton accessor function
     /// </summary>
-    public static UIManager instance
+    public static UIManager Instance
     {
         get
         {
             if (!mInstance)
-                new GameObject("UI Manager");
-
+            {
+                mInstance = new UIManager();
+            }
             return mInstance;
         }
     }
@@ -113,8 +114,15 @@ public class UIManager : MonoBehaviour
     }
     public void DisplaySettingsScreen()
     {
-        currentState = UIState.Settings;
-        Debug.Log("DisplaySettingsScreen hit!");
+        SetDisplayMode(UIState.Settings);
+        Debug.Log("UI State changed! now displaying settings screen");
+    }
+
+    public void DisplayGameplay()
+    {
+        SetDisplayMode(UIState.Default);
+        Debug.Log("UI State changed! now displaying gameplay UI");
+
     }
 
 }
