@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Singleton accessor function
     /// </summary>
-    public static UIManager instance
+    public static UIManager Instance
     {
         get
         {

@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4995331082440828}
+  - component: {fileID: 114448543231456626}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -39,3 +40,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114448543231456626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1778372013585322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cce24f4c9adfcb42a3759bb5cba259b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameStarted: 0
+  visibleCardList: []
+  score: 0
+  maxNumberOfPairs: 1
+  cardOutlinePrefabName: cardOutline
+  matchedParticleFXName: cardMatchFX
+  matchedParticleSystemPrefab: {fileID: 1147686553805272, guid: 6e215d7d1e696624dbc125ac6a596420,
+    type: 2}
+  cardOutlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
+    type: 2}
