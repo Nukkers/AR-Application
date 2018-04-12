@@ -166,6 +166,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("Lost card :" + card.name);
     }
 
+<<<<<<< HEAD
+
+    public void SetModelSize(float size)
+    {
+        this.transform.localScale = new Vector3(size, size, size);
+    }
+=======
     public void MultipleRounds()
     {
         Debug.Log("New game is being started");
@@ -178,4 +185,5 @@ public class GameManager : MonoBehaviour
 
     }
 
+>>>>>>> origin/master
 }

@@ -25,6 +25,11 @@ public class Card : MonoBehaviour, ITrackableEventHandler
     public bool matched = false;
     private TrackableBehaviour mTrackableBehaviour;
 
+<<<<<<< HEAD
+
+    public GameObject outlinePrefab;
+=======
+>>>>>>> origin/master
     // Use this for initialization
     void Start () {
         Instantiate(GameManager.Instance.cardOutlinePrefab, this.transform);
@@ -32,11 +37,15 @@ public class Card : MonoBehaviour, ITrackableEventHandler
         if (mTrackableBehaviour)
         {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+            
         }
+
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
+        
         		
 	}
 
@@ -53,13 +62,28 @@ public class Card : MonoBehaviour, ITrackableEventHandler
     /// <param name="newStatus"></param>
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
+
+
         if (GameManager.Instance.gameStarted)
         {
-            if (newStatus == TrackableBehaviour.Status.TRACKED)
-                        GameManager.Instance.CardTracked(this);
-                    else if (newStatus == TrackableBehaviour.Status.NOT_FOUND)
-                        GameManager.Instance.CardLost(this);
+
+            
+            if (newStatus == TrackableBehaviour.Status.DETECTED ||
+                newStatus == TrackableBehaviour.Status.TRACKED ||
+                newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
+            {
+                
+                GameManager.Instance.CardTracked(this);
+                
+            }
+
+
+
+            else if (previousStatus==TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NOT_FOUND)
+            {
+                GameManager.Instance.CardLost(this);
+            }
         }
-        
+
     }
 }

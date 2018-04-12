@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public enum UIState
@@ -123,4 +124,5 @@ public class UIManager : MonoBehaviour
         Debug.Log("UI State changed! now displaying gameplay UI");
 
     }
+
 }
