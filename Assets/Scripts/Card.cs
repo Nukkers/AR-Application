@@ -25,11 +25,7 @@ public class Card : MonoBehaviour, ITrackableEventHandler
     public bool matched = false;
     private TrackableBehaviour mTrackableBehaviour;
 
-<<<<<<< HEAD
-
     public GameObject outlinePrefab;
-=======
->>>>>>> origin/master
     // Use this for initialization
     void Start () {
         Instantiate(GameManager.Instance.cardOutlinePrefab, this.transform);

@@ -19,9 +19,6 @@ public class MainScreen : MonoBehaviour {
     /// </summary>
     public void OnSettingsClicked()
     {
-<<<<<<< HEAD
-        UIManager.instance.SetDisplayMode(UIState.Settings);
-=======
         UIManager.Instance.SetDisplayMode(UIState.Settings);
     }
 
@@ -33,6 +30,5 @@ public class MainScreen : MonoBehaviour {
     {
         UIManager.Instance.DisplayGameplay();
         GameManager.Instance.StartGame();
->>>>>>> origin/master
     }
 }
