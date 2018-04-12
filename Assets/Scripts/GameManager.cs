@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
+using UnityEngine.UI;
 using Vuforia;
 
 /// <summary>
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     public List<Card> visibleCardList;
     public int score = 0;
-
+    public Text endOfRoundText = GameObject.Find("NewRoundText").GetComponentInChildren<UnityEngine.UI.Text>();
     public int maxNumberOfPairs = 1; // maximum number of pairs within the game 
     public string cardOutlinePrefabName = "cardOutlineSprite";
     public string matchedParticleFXName = "CardMatchParticles";
@@ -62,12 +63,15 @@ public class GameManager : MonoBehaviour
 
         //// don't track the images when the application is opened
         Debug.Log("Tracking stopped");
-        TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        
         Debug.Log("Inside start func");
         visibleCardList = new List<Card>();
     }
 
-
+    private void Start()
+    {
+        TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -86,6 +90,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Starting the game.");
             gameStarted = true;
+            endOfRoundText.text = "End of round";
             TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
         }
     }
@@ -173,6 +178,7 @@ public class GameManager : MonoBehaviour
     }
     public void MultipleRounds()
     {
+        endOfRoundText.text = "End of round";
         Debug.Log("New game is being started");
         var cardsFound = FindObjectsOfType<Card>();
         Debug.Log(cardsFound + " : " + cardsFound.Length);
@@ -180,6 +186,8 @@ public class GameManager : MonoBehaviour
         {
             cards.matched = false;
         }
+        endOfRoundText.text = "Next Round";
+        StartGame();
 
     }
 
