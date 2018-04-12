@@ -22,8 +22,13 @@ public class MainScreen : MonoBehaviour {
         UIManager.Instance.SetDisplayMode(UIState.Settings);
     }
 
+    /// <summary>
+    /// OnClick handler for the start game button. Call UI Manager to request a state change and
+    /// call GameManager to start the game itself.
+    /// </summary>
     public void OnStartGameClicked()
     {
+        UIManager.Instance.DisplayGameplay();
         GameManager.Instance.StartGame();
     }
 }

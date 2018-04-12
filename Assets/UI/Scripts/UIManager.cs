@@ -113,7 +113,14 @@ public class UIManager : MonoBehaviour
     }
     public void DisplaySettingsScreen()
     {
-        currentState = UIState.Settings;
-        Debug.Log("DisplaySettingsScreen hit!");
+        SetDisplayMode(UIState.Settings);
+        Debug.Log("UI State changed! now displaying settings screen");
+    }
+
+    public void DisplayGameplay()
+    {
+        SetDisplayMode(UIState.Default);
+        Debug.Log("UI State changed! now displaying gameplay UI");
+
     }
 }
