@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -174,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &145512373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +243,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1611912871}
+  - {fileID: 2018731805}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -329,6 +330,7 @@ MonoBehaviour:
   cardType: 1
   audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
+  outlinePrefab: {fileID: 0}
 --- !u!33 &183229311
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -670,6 +672,7 @@ MonoBehaviour:
   cardType: 1
   audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
+  outlinePrefab: {fileID: 0}
 --- !u!33 &476793904
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -826,6 +829,7 @@ MonoBehaviour:
   cardType: 1
   audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
+  outlinePrefab: {fileID: 0}
 --- !u!33 &545339783
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1180,6 +1184,7 @@ MonoBehaviour:
   cardType: 1
   audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
+  outlinePrefab: {fileID: 0}
 --- !u!33 &837845231
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1472,6 +1477,7 @@ MonoBehaviour:
   cardType: 1
   audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
+  outlinePrefab: {fileID: 0}
 --- !u!33 &998683855
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1758,6 +1764,7 @@ MonoBehaviour:
   cardType: 1
   audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
+  outlinePrefab: {fileID: 0}
 --- !u!33 &1059714329
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2044,6 +2051,7 @@ MonoBehaviour:
   cardType: 1
   audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
+  outlinePrefab: {fileID: 0}
 --- !u!33 &1280685896
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2464,7 +2472,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: tiger2Material
+  m_Name: tiger1Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2477,7 +2485,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c9b0fa464b684747997f197f4963e9e3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 42b893c3aea54013a7bb7d0114b6c55a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2810,6 +2818,7 @@ MonoBehaviour:
   cardType: 1
   audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
+  outlinePrefab: {fileID: 0}
 --- !u!33 &1859903283
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2969,6 +2978,80 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400700, guid: 427f72e3e110e5145bf4956336b40f6f, type: 3}
   m_PrefabInternal: {fileID: 1875445383}
+--- !u!1 &2018731804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2018731805}
+  - component: {fileID: 2018731807}
+  - component: {fileID: 2018731806}
+  m_Layer: 5
+  m_Name: NewRoundText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2018731805
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2018731804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 145512376}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2018731806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2018731804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &2018731807
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2018731804}
 --- !u!1 &2146897084
 GameObject:
   m_ObjectHideFlags: 0

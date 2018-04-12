@@ -60,7 +60,7 @@ public class UIManager : MonoBehaviour
         mMainScreen.SetActive(false);
 
         mGazeInput = gameObject.AddComponent<GazeInput>();
-        mCamera = Camera.main;
+        //mCamera = Camera.main;
         SetDisplayMode(UIState.MainMenu);
     }
 
@@ -77,9 +77,9 @@ public class UIManager : MonoBehaviour
     /// <param name="widget"></param>
     private void SetWidgetActive(GameObject widget)
     {
-        widget.transform.position = (mCamera.transform.forward * 10); // Set the transform 10 units infront of the camera.
+        //widget.transform.position = (Camera.main.transform.forward * 10); // Set the transform 10 units infront of the camera.
         //widget.transform.LookAt(-mCamera.transform.forward); // We should be able to safely assume that 0,0,0 is the camera.
-        widget.SetActive(true);
+       // widget.SetActive(true);
     }
 
     public void SetDisplayMode(UIState newMode)

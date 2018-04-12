@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     public List<Card> visibleCardList;
     public int score = 0;
-    public Text endOfRoundText = GameObject.Find("NewRoundText").GetComponentInChildren<UnityEngine.UI.Text>();
+    public Text endOfRoundText;
     public int maxNumberOfPairs = 1; // maximum number of pairs within the game 
     public string cardOutlinePrefabName = "cardOutlineSprite";
     public string matchedParticleFXName = "CardMatchParticles";
@@ -70,7 +70,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+       // TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        StartGame();
     }
     // Update is called once per frame
     void Update()
@@ -90,8 +91,9 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Starting the game.");
             gameStarted = true;
+            endOfRoundText = GameObject.Find("NewRoundText").GetComponent<UnityEngine.UI.Text>();
             endOfRoundText.text = "End of round";
-            TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
+           // TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
         }
     }
 
@@ -170,14 +172,11 @@ public class GameManager : MonoBehaviour
         visibleCardList.Remove(card);
         Debug.Log("Lost card :" + card.name);
     }
-
-<<<<<<< HEAD
-
     public void SetModelSize(float size)
     {
         this.transform.localScale = new Vector3(size, size, size);
     }
-=======
+
     public void MultipleRounds()
     {
         endOfRoundText.text = "End of round";
@@ -192,6 +191,4 @@ public class GameManager : MonoBehaviour
         StartGame();
 
     }
-
->>>>>>> origin/master
 }
