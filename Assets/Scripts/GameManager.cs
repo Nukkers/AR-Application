@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         //// don't track the images when the application is opened
         Debug.Log("Tracking stopped");
         
-        Debug.Log("Inside start func");
+        //Debug.Log("Inside start func");
         visibleCardList = new List<Card>();
     }
 
@@ -92,7 +92,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("Starting the game.");
             gameStarted = true;
             endOfRoundText = GameObject.Find("NewRoundText").GetComponent<UnityEngine.UI.Text>();
-            endOfRoundText.text = "End of round";
            // TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
         }
     }
@@ -159,7 +158,7 @@ public class GameManager : MonoBehaviour
 
                 }
             }
-
+            // maximum number of pairs reached start a new game round 
             if (score == maxNumberOfPairs)
             {
                 MultipleRounds();
@@ -172,19 +171,15 @@ public class GameManager : MonoBehaviour
         visibleCardList.Remove(card);
         Debug.Log("Lost card :" + card.name);
     }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 904543e2e9b56c4d33165828aaed88aab0c68658
     public void SetModelSize(float size)
     {
         this.transform.localScale = new Vector3(size, size, size);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 904543e2e9b56c4d33165828aaed88aab0c68658
+    /// new game round is being started 
+    /// display message to user about end of round 
+    /// reset the cards matched to false so they can be paired up again 
     public void MultipleRounds()
     {
         endOfRoundText.text = "End of round";
@@ -197,10 +192,5 @@ public class GameManager : MonoBehaviour
         }
         endOfRoundText.text = "Next Round";
         StartGame();
-
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 904543e2e9b56c4d33165828aaed88aab0c68658
 }

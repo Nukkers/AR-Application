@@ -327,8 +327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
-  audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
+  cardType: 0
+  audioCue: {fileID: 0}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &183229311
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelToTransform: {fileID: 1654053958}
+  modelToTransform: {fileID: 0}
 --- !u!114 &183229315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,8 +669,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
-  audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
+  cardType: 0
+  audioCue: {fileID: 0}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &476793904
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelToTransform: {fileID: 257965873}
+  modelToTransform: {fileID: 0}
 --- !u!114 &476793908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,8 +826,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
-  audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
+  cardType: 0
+  audioCue: {fileID: 0}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &545339783
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelToTransform: {fileID: 1539351802}
+  modelToTransform: {fileID: 0}
 --- !u!114 &545339787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,8 +1181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
-  audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
+  cardType: 0
+  audioCue: {fileID: 0}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &837845231
@@ -1252,7 +1252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelToTransform: {fileID: 1489276998}
+  modelToTransform: {fileID: 0}
 --- !u!114 &837845235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,8 +1474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
-  audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
+  cardType: 0
+  audioCue: {fileID: 0}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &998683855
@@ -1545,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelToTransform: {fileID: 1875445384}
+  modelToTransform: {fileID: 0}
 --- !u!114 &998683859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1761,8 +1761,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
-  audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
+  cardType: 0
+  audioCue: {fileID: 0}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &1059714329
@@ -1832,7 +1832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelToTransform: {fileID: 862241813}
+  modelToTransform: {fileID: 0}
 --- !u!114 &1059714333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2048,8 +2048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
-  audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
+  cardType: 0
+  audioCue: {fileID: 0}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &1280685896
@@ -2119,7 +2119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelToTransform: {fileID: 670715644}
+  modelToTransform: {fileID: 0}
 --- !u!114 &1280685900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2815,8 +2815,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairID: 0
-  cardType: 1
-  audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
+  cardType: 0
+  audioCue: {fileID: 0}
   matched: 0
   outlinePrefab: {fileID: 0}
 --- !u!33 &1859903283
@@ -2886,7 +2886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelToTransform: {fileID: 439426733}
+  modelToTransform: {fileID: 0}
 --- !u!114 &1859903287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3025,7 +3025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9558824, g: 0.077314034, b: 0.077314034, a: 1}
+  m_Color: {r: 0.014705896, g: 0.004865922, b: 0.004865922, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3034,10 +3034,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3082,8 +3082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db88a0f3a5c154145a75444ac4f54dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mCamera: {fileID: 2146897088}
-  lookAtDuration: 2
+  mCamera: {fileID: 0}
+  lookAtDuration: 0
   targetReticle: {fileID: 0}
 --- !u!114 &2146897086
 MonoBehaviour:

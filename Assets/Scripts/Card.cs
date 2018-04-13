@@ -25,15 +25,13 @@ public class Card : MonoBehaviour, ITrackableEventHandler
     public bool matched = false;
     private TrackableBehaviour mTrackableBehaviour;
 
-<<<<<<< HEAD
 
 
     public GameObject outlinePrefab;
 
 
-=======
-    public GameObject outlinePrefab;
->>>>>>> 904543e2e9b56c4d33165828aaed88aab0c68658
+   // public GameObject outlinePrefab;
+
     // Use this for initialization
     void Start () {
         Instantiate(GameManager.Instance.cardOutlinePrefab, this.transform);
