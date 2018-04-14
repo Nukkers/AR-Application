@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     public GameObject settingsScreenPrefab;
     public GameObject hudPrefab;
 
-    private static UIManager mInstance;
+    private static UIManager mInstance = null;
 
     private GameObject mHudOverlay;
     private GameObject mSettingsScreen;
@@ -77,9 +77,9 @@ public class UIManager : MonoBehaviour
     /// <param name="widget"></param>
     private void SetWidgetActive(GameObject widget)
     {
-        //widget.transform.position = (Camera.main.transform.forward * 10); // Set the transform 10 units infront of the camera.
-        //widget.transform.LookAt(-mCamera.transform.forward); // We should be able to safely assume that 0,0,0 is the camera.
-       // widget.SetActive(true);
+        widget.transform.position = (Camera.main.transform.forward * 10); // Set the transform 10 units infront of the camera.
+        //widget.transform.LookAt(Camera.main.transform.forward); // We should be able to safely assume that 0,0,0 is the camera.
+        widget.SetActive(true);
     }
 
     public void SetDisplayMode(UIState newMode)
