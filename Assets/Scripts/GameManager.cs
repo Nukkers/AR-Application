@@ -180,7 +180,7 @@ public class GameManager : MonoBehaviour
     /// reset the cards matched to false so they can be paired up again 
     public void MultipleRounds()
     {
-        endOfRoundText.text = "End of round";
+        //endOfRoundText.text = "End of round";
         Debug.Log("New game is being started");
         var cardsFound = FindObjectsOfType<Card>();
         Debug.Log(cardsFound + " : " + cardsFound.Length);
@@ -188,7 +188,10 @@ public class GameManager : MonoBehaviour
         {
             cards.matched = false;
         }
+        score = 0; // need to reset the score 
+
         endOfRoundText.text = "Next Round";
+        
         StartGame();
     }
 }
