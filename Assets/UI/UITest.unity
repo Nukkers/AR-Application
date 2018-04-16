@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872692, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   settingsScreenPrefab: {fileID: 1530485644719220, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
     type: 2}
   hudPrefab: {fileID: 1292349653661136, guid: 0439d9e3088308c46872b4b10b13b3ad, type: 2}
-  currentState: 0
+  currentState: 1
 --- !u!1 &1031281691
 GameObject:
   m_ObjectHideFlags: 0

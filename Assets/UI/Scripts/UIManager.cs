@@ -12,11 +12,10 @@ public enum UIState
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject mainScreenPrefab;
-    public GameObject settingsScreenPrefab;
-    public GameObject hudPrefab;
+    public string mainScreenResourceName = "MainScreenPrefab";
+    public string settingsScreenResourceName = "SettingsScreenPrefab";
+    public string hudResourceName = "HUDPrefab";
 
-    private static UIManager mInstance = null;
 
     private GameObject mHudOverlay;
     private GameObject mSettingsScreen;
@@ -29,6 +28,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Singleton accessor function
     /// </summary>
+    private static UIManager mInstance = null;
     public static UIManager Instance
     {
         get
@@ -51,9 +51,9 @@ public class UIManager : MonoBehaviour
             Destroy(this);
 
         /* Instantiate prefabs, we do this ahead of time to minimize any runtime impact */
-        mHudOverlay = GameObject.Instantiate(hudPrefab);
-        mSettingsScreen = Instantiate(settingsScreenPrefab);
-        mMainScreen = Instantiate(mainScreenPrefab);
+        mHudOverlay = Instantiate(PrefabManager.Instance.GetPrefab(hudResourceName));
+        mSettingsScreen = Instantiate(PrefabManager.Instance.GetPrefab(settingsScreenResourceName));
+        mMainScreen = Instantiate(PrefabManager.Instance.GetPrefab(mainScreenResourceName));
 
         /* Set the default UI state */
         mSettingsScreen.SetActive(false);
@@ -62,12 +62,6 @@ public class UIManager : MonoBehaviour
         mGazeInput = gameObject.AddComponent<GazeInput>();
         //mCamera = Camera.main;
         SetDisplayMode(UIState.MainMenu);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     /// <summary>
