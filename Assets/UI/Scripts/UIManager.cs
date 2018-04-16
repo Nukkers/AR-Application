@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     private GameObject mMainScreen;
     private GazeInput mGazeInput;
     private Camera mCamera;
-    public UIState currentState = UIState.Default;
+    public UIState currentState = UIState.MainMenu;
 
 
     /// <summary>
@@ -35,8 +35,8 @@ public class UIManager : MonoBehaviour
         {
             if (!mInstance)
             {
-                mInstance = new UIManager();
-                mInstance.Initialize();
+                var temp = new GameObject();
+                temp.AddComponent<UIManager>().Initialize();
             }
             return mInstance;
         }
@@ -49,7 +49,7 @@ public class UIManager : MonoBehaviour
     void Initialize()
     {
         /* Set mInstance to this instance of the class if null, otherwise kill the object */
-        if (mInstance == null)
+        if (mInstance == null )
             mInstance = this;
         else
             Destroy(this);
@@ -63,14 +63,13 @@ public class UIManager : MonoBehaviour
         mSettingsScreen.SetActive(false);
         mMainScreen.SetActive(false);
 
-        mGazeInput = gameObject.AddComponent<GazeInput>();
         //mCamera = Camera.main;
         SetDisplayMode(UIState.MainMenu);
     }
     // Use this for initialization
     void Start()
     {
-        
+        mGazeInput = gameObject.AddComponent<GazeInput>(); // Initialize gaze input in start, otherwise it seems too early in unity's lifecycle to get a reference to the base game object.
     }
 
     /// <summary>

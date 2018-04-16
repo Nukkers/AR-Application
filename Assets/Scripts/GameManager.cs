@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
        // TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
-        StartGame();
+       // StartGame();
     }
     // Update is called once per frame
     void Update()
