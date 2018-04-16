@@ -2135,9 +2135,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1308864208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c5299c1c838a8c44b49ecc9254704e0, type: 3}
+  m_Script: {fileID: 11500000, guid: bebbd4c98bf3780418c5a825f588d696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enabled: 1
+  keywords:
+  - start
+  - quit
+  - test
+  keywordConfidence: 0.2
+  DebugMode: 1
+  ResultsField: {fileID: 906646053}
+  ResultsDisplay: {fileID: 1454985193}
 --- !u!224 &1308864210
 RectTransform:
   m_ObjectHideFlags: 0
