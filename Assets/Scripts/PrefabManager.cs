@@ -45,7 +45,7 @@ public class PrefabManager : MonoBehaviour
     public GameObject GetPrefab(string prefabName)
     {
         /* Check if we already have the object loaded and stored, if so return it */
-        if (mLoadedPrefabs[prefabName])
+        if (mLoadedPrefabs.ContainsKey(prefabName))
             return mLoadedPrefabs[prefabName];
 
         /* No object was found, so lets try and load it from disk */

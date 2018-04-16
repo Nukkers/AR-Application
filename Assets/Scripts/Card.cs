@@ -26,30 +26,32 @@ public class Card : MonoBehaviour, ITrackableEventHandler
     private TrackableBehaviour mTrackableBehaviour;
 
 
+    static public string outlineFXResourceName = "cardOutlineFX";
+    private GameObject mOutlinePrefab;
 
-    public GameObject outlinePrefab;
 
-
-   // public GameObject outlinePrefab;
+    // public GameObject outlinePrefab;
 
     // Use this for initialization
-    void Start () {
-        Instantiate(GameManager.Instance.cardOutlinePrefab, this.transform);
+    void Start()
+    {
+        mOutlinePrefab = PrefabManager.Instance.GetPrefab("cardOutlineFX");
+
+        Instantiate(mOutlinePrefab, this.transform);
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
         {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
-            
-        }
 
-        
+        }
     }
-	
-	// Update is called once per frame
-	void Update () {
-        
-        		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
+    }
 
     public void PlayAudioCue()
     {
@@ -65,20 +67,15 @@ public class Card : MonoBehaviour, ITrackableEventHandler
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
 
-
         if (GameManager.Instance.gameStarted)
         {
-
-            
             if (newStatus == TrackableBehaviour.Status.DETECTED ||
                 newStatus == TrackableBehaviour.Status.TRACKED ||
                 newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
             {
-                
                 GameManager.Instance.CardTracked(this);
-                
             }
-            else if (previousStatus==TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NOT_FOUND)
+            else if (previousStatus == TrackableBehaviour.Status.TRACKED && newStatus == TrackableBehaviour.Status.NOT_FOUND)
             {
                 GameManager.Instance.CardLost(this);
             }

@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1778372013585322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 131.43837, y: 135.34875, z: -90.66934}
+  m_LocalPosition: {x: 705.35583, y: 640.1435, z: -925.38275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,10 +54,7 @@ MonoBehaviour:
   gameStarted: 0
   visibleCardList: []
   score: 0
+  endOfRoundText: {fileID: 0}
   maxNumberOfPairs: 1
-  cardOutlinePrefabName: cardOutline
-  matchedParticleFXName: cardMatchFX
-  matchedParticleSystemPrefab: {fileID: 1147686553805272, guid: 6e215d7d1e696624dbc125ac6a596420,
-    type: 2}
-  cardOutlinePrefab: {fileID: 1223770481523464, guid: d32c52e957e17d5419b3db6da201fe56,
-    type: 2}
+  matchedParticleFXName: CardMatchParticles
+  matchedParticleSystemPrefab: {fileID: 0}

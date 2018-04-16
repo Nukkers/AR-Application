@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4418148846734326}
   - component: {fileID: 212032823399496284}
   m_Layer: 0
-  m_Name: cardOutlineSprite
+  m_Name: cardOutlineFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

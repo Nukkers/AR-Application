@@ -12,9 +12,9 @@ public enum UIState
 
 public class UIManager : MonoBehaviour
 {
-    public string mainScreenResourceName = "MainScreenPrefab";
-    public string settingsScreenResourceName = "SettingsScreenPrefab";
-    public string hudResourceName = "HUDPrefab";
+    public string mainScreenResourceName = "MainScreenWidget";
+    public string settingsScreenResourceName = "SettingsScreenWidget";
+    public string hudResourceName = "HUD";
 
 
     private GameObject mHudOverlay;
@@ -36,13 +36,17 @@ public class UIManager : MonoBehaviour
             if (!mInstance)
             {
                 mInstance = new UIManager();
+                mInstance.Initialize();
             }
             return mInstance;
         }
     }
 
-    // Use this for initialization
-    void Start()
+
+    /// <summary>
+    /// Called when the singleton instance is initialized. We use this rather than Start to get around Unity lifecycle limitatinos
+    /// </summary>
+    void Initialize()
     {
         /* Set mInstance to this instance of the class if null, otherwise kill the object */
         if (mInstance == null)
@@ -62,6 +66,11 @@ public class UIManager : MonoBehaviour
         mGazeInput = gameObject.AddComponent<GazeInput>();
         //mCamera = Camera.main;
         SetDisplayMode(UIState.MainMenu);
+    }
+    // Use this for initialization
+    void Start()
+    {
+        
     }
 
     /// <summary>

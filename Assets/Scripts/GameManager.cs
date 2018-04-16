@@ -22,10 +22,9 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public Text endOfRoundText;
     public int maxNumberOfPairs = 1; // maximum number of pairs within the game 
-    public string cardOutlinePrefabName = "cardOutlineSprite";
     public string matchedParticleFXName = "CardMatchParticles";
+
     public GameObject matchedParticleSystemPrefab;
-    public GameObject cardOutlinePrefab; // Retrieved by the cards as needed, saves assigning it manually to each card type.
     /* Singleton implementation */
     private static GameManager mInstance; // Instance of the GameManager object - managed by the singleton accessors (see below)
     public static GameManager Instance
@@ -55,8 +54,7 @@ public class GameManager : MonoBehaviour
             Destroy(this);
 
         /* Preload prefabs from resource name */
-        cardOutlinePrefab = (GameObject)Resources.Load(cardOutlinePrefabName);
-        matchedParticleSystemPrefab = (GameObject)Resources.Load(matchedParticleFXName);
+        matchedParticleSystemPrefab = PrefabManager.Instance.GetPrefab(matchedParticleFXName);
 
         if (!gameStarted)
             UIManager.Instance.SetDisplayMode(UIState.MainMenu);
@@ -91,7 +89,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Starting the game.");
             gameStarted = true;
-            endOfRoundText = GameObject.Find("NewRoundText").GetComponent<UnityEngine.UI.Text>();
+            //endOfRoundText = GameObject.Find("NewRoundText").GetComponent<UnityEngine.UI.Text>();
            // TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
         }
     }

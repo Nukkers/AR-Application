@@ -19,11 +19,6 @@ public class MainScreen : MonoBehaviour {
     /// </summary>
     public void OnSettingsClicked()
     {
-
-
-        UIManager.Instance.SetDisplayMode(UIState.Settings);
-
-
         UIManager.Instance.SetDisplayMode(UIState.Settings);
     }
 
