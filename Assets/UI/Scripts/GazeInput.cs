@@ -16,6 +16,8 @@ public class GazeInput : MonoBehaviour
     public Camera mCamera;
     public Transform mLastCanvas = null;
     public Button lastSelected = null;
+
+    private AudioSource mAudio;
     public const int uiLayerMask = 1 << 5; // TODO : Refactor me, generate a layer mask for UI objects.
     void Start()
     {
@@ -72,6 +74,11 @@ public class GazeInput : MonoBehaviour
                     Button obj = result.gameObject.GetComponent<Button>(); // Surely there's a better way?
                     if (obj != null)
                     {
+                        // Sound when gazed upon. 4 second delay (keeps repeating)
+                        mAudio = obj.GetComponent<AudioSource>();
+                        if (mAudio != null && !mAudio.isPlaying)
+                            //mAudio.PlayDelayed(4.0f);
+
                         if (obj != lastSelected && lastSelected != null)
                             lastSelected.OnDeselect(null);
 
