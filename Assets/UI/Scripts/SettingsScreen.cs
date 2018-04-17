@@ -1,13 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 
 public class SettingsScreen : MonoBehaviour {
 
+    private AudioSource[] mAudio; // Will store audio sources that will be played when a button is clicked (if audio description is enabled)
+
+    private Transform mAudioButton; // audio button
+    private Transform mContrastButton; // contrast button
+    private Transform mVoiceButton; // voice input button
 	// Use this for initialization
 	void Start () {
-		
-	}
+
+        // Access screenwidget -> layout panel ->  button ---- probably there are easier ways to do it, but this would be faster than just using GameObject.Find ? Uglier though.
+        mAudioButton = gameObject.transform.Find("LayoutPanel").transform.Find("AudioDescriptionButton");
+        mContrastButton = gameObject.transform.Find("LayoutPanel").transform.Find("HighContrastButton");
+        mVoiceButton = gameObject.transform.Find("LayoutPanel").transform.Find("VoiceInputButton");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,6 +29,16 @@ public class SettingsScreen : MonoBehaviour {
     /// </summary>
     public void OnAudioDescriptionClicked()
     {
+        mAudio = mAudioButton.GetComponents<AudioSource>();
+        // play sound based on the selection state
+
+        // To be fixed - sounds are overlapping if user clicks on the button multiple times quickly (i.e. when the previous sound hasn't finished)
+        if (mAudioButton.GetComponent<BigToggleButton>().selectionState)
+            mAudio[1].Play();
+        else
+            mAudio[2].Play();
+
+
         // TODO : Implement audio description setting button logic
     }
 
@@ -27,6 +47,20 @@ public class SettingsScreen : MonoBehaviour {
     /// </summary>
     public void OnHighContrastClicked()
     {
+        // check if audio description is enabled. If true then
+        // Get the necessary audio sources to play
+        // play the necessary sound
+
+        if (mAudioButton.GetComponent<BigToggleButton>().selectionState)
+        {
+            mAudio = mContrastButton.GetComponents<AudioSource>();
+
+            if (mContrastButton.GetComponent<BigToggleButton>().selectionState)
+                mAudio[1].Play();
+            else
+                mAudio[2].Play();
+        }
+
         // TODO : Implement high contrast setting button logic
     }
 
@@ -35,6 +69,20 @@ public class SettingsScreen : MonoBehaviour {
     /// </summary>
     public void OnVoiceInputClicked()
     {
+        // check if audio description is enabled. If true then
+        // Get the necessary audio sources to play
+        // play the necessary sound
+
+        if (mAudioButton.GetComponent<BigToggleButton>().selectionState)
+        {
+            mAudio = mVoiceButton.GetComponents<AudioSource>();
+
+            if (mVoiceButton.GetComponent<BigToggleButton>().selectionState)
+                mAudio[1].Play();
+            else
+                mAudio[2].Play();
+        }
+
         // TODO : Implement voice input setting button logic
     }
 }

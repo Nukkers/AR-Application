@@ -520,6 +520,66 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 224231533169068582, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231533169068582, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231533169068582, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 85.333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 224231533169068582, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224017566926336346, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224017566926336346, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224017566926336346, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 224017566926336346, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224238289358465590, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224238289358465590, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224238289358465590, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 426.6667
+      objectReference: {fileID: 0}
+    - target: {fileID: 224238289358465590, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e1aa5cc0fc19ab49b533d06d06ac79e, type: 2}
   m_IsPrefabParent: 0
