@@ -29,10 +29,16 @@ public class SettingsScreen : MonoBehaviour {
     /// </summary>
     public void OnAudioDescriptionClicked()
     {
-        mAudio = mAudioButton.GetComponents<AudioSource>();
-        // play sound based on the selection state
+        // check if audio description is enabled. If true then
+        // Get the necessary audio sources to play
+        // Stop any sounds that are currently being played (in the settings screen only)
+        // play the necessary sound
 
-        // To be fixed - sounds are overlapping if user clicks on the button multiple times quickly (i.e. when the previous sound hasn't finished)
+        if (mAudio !=null)
+            StopPlayingSound();
+
+        mAudio = mAudioButton.GetComponents<AudioSource>();
+
         if (mAudioButton.GetComponent<BigToggleButton>().selectionState)
             mAudio[1].Play();
         else
@@ -49,10 +55,14 @@ public class SettingsScreen : MonoBehaviour {
     {
         // check if audio description is enabled. If true then
         // Get the necessary audio sources to play
+        // Stop any sounds that are currently being played (in the settings screen only)
         // play the necessary sound
 
         if (mAudioButton.GetComponent<BigToggleButton>().selectionState)
         {
+            if (mAudio != null)
+                StopPlayingSound();
+
             mAudio = mContrastButton.GetComponents<AudioSource>();
 
             if (mContrastButton.GetComponent<BigToggleButton>().selectionState)
@@ -71,10 +81,14 @@ public class SettingsScreen : MonoBehaviour {
     {
         // check if audio description is enabled. If true then
         // Get the necessary audio sources to play
+        // Stop any sounds that are currently being played (in the settings screen only)
         // play the necessary sound
 
         if (mAudioButton.GetComponent<BigToggleButton>().selectionState)
         {
+            if (mAudio != null)
+                StopPlayingSound();
+
             mAudio = mVoiceButton.GetComponents<AudioSource>();
 
             if (mVoiceButton.GetComponent<BigToggleButton>().selectionState)
@@ -84,5 +98,14 @@ public class SettingsScreen : MonoBehaviour {
         }
 
         // TODO : Implement voice input setting button logic
+    }
+
+    // Stops playing all sounds of previously clicked button (to avoid sound overlapping)
+    private void StopPlayingSound()
+    {
+        foreach (AudioSource audio in mAudio)
+        {
+            audio.Stop();
+        }
     }
 }
