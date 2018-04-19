@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 public enum UIState
 {
@@ -40,6 +41,11 @@ public class UIManager : MonoBehaviour
             }
             return mInstance;
         }
+    }
+
+    internal void DisplayMainMenu()
+    {
+        SetDisplayMode(UIState.MainMenu);
     }
 
 

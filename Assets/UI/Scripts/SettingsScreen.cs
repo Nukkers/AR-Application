@@ -24,6 +24,10 @@ public class SettingsScreen : MonoBehaviour {
 		
 	}
 
+    public void OnBackButtonClicked()
+    {
+        UIManager.Instance.DisplayMainMenu();
+    }
     /// <summary>
     /// OnClick handler for the Audio Description button
     /// </summary>
