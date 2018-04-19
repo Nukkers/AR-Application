@@ -10,6 +10,9 @@ public class SettingsScreen : MonoBehaviour {
     private Transform mAudioButton; // audio button
     private Transform mContrastButton; // contrast button
     private Transform mVoiceButton; // voice input button
+
+    public ExampleStreaming mVoiceInput;
+
 	// Use this for initialization
 	void Start () {
 
@@ -17,12 +20,17 @@ public class SettingsScreen : MonoBehaviour {
         mAudioButton = gameObject.transform.Find("LayoutPanel").transform.Find("AudioDescriptionButton");
         mContrastButton = gameObject.transform.Find("LayoutPanel").transform.Find("HighContrastButton");
         mVoiceButton = gameObject.transform.Find("LayoutPanel").transform.Find("VoiceInputButton");
+        mVoiceInput = GameObject.Find("WatsonSpeechRecognition").GetComponent<ExampleStreaming>();
+
+        //Set status of buttons
+        mVoiceButton.GetComponent<BigToggleButton>().OnSetState(mVoiceInput.IsEnabled());
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
+
 
     /// <summary>
     /// OnClick handler for the Audio Description button
@@ -98,6 +106,16 @@ public class SettingsScreen : MonoBehaviour {
         }
 
         // TODO : Implement voice input setting button logic
+
+        if (mVoiceInput.IsEnabled())
+        {
+            mVoiceInput.DisableSpeechRecog();
+        }
+        else
+        {
+            mVoiceInput.EnableSpeechRecog();
+        }
+
     }
 
     // Stops playing all sounds of previously clicked button (to avoid sound overlapping)

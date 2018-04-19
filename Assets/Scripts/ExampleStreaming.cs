@@ -32,7 +32,7 @@ public class ExampleStreaming : MonoBehaviour
 
     [Header("Settings")]
     [Tooltip("Disable speech recognition if not needed to prevent unneccesary use of cloud allowance")]
-    public bool Enabled = false;    //Allow switch off to preserve cloud allowance
+    public bool SpeechRecogEnabled = false;    //Allow switch off to preserve cloud allowance
 
     [Tooltip("Keywords being detected. If changing, amend code to trigger required functions.")]
     public string[] keywords = { "start", "quit", "test"};  //Keywords to watch for
@@ -83,7 +83,7 @@ public class ExampleStreaming : MonoBehaviour
         get { return _speechToText.IsListening; }
         set
         {
-            if (value && !_speechToText.IsListening && Enabled)
+            if (value && !_speechToText.IsListening && SpeechRecogEnabled)
             {
                 _speechToText.RecognizeModel = "en-GB_BroadbandModel";
                 _speechToText.DetectSilence = true;
@@ -108,6 +108,24 @@ public class ExampleStreaming : MonoBehaviour
             }
         }
     }
+
+    public void DisableSpeechRecog()
+    {
+        Debug.Log("Disable Speech Called");
+        SpeechRecogEnabled = false;
+        _speechToText.StopListening();
+        
+    }
+
+    public void EnableSpeechRecog()
+    {
+        Debug.Log("Enable Speech Called");
+        SpeechRecogEnabled = true;
+        Active = true;
+        StartRecording();
+    }
+
+    public bool IsEnabled() { return SpeechRecogEnabled; }
 
     private void StartRecording()
     {
