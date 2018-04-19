@@ -21,8 +21,11 @@ public class GameManager : MonoBehaviour
     public List<Card> visibleCardList;
     public int score = 0;
     public Text endOfRoundText;
-    public int maxNumberOfPairs = 1; // maximum number of pairs within the game 
+    public Text currentScore;
+    public int maxNumberOfPairs = 3; // maximum number of pairs within the game 
+    public int numberOfPairs = 4;
     public string matchedParticleFXName = "CardMatchParticles";
+    public int currentRound = 1;
 
     public GameObject matchedParticleSystemPrefab;
     /* Singleton implementation */
@@ -64,12 +67,16 @@ public class GameManager : MonoBehaviour
         
         //Debug.Log("Inside start func");
         visibleCardList = new List<Card>();
+        currentScore = GameObject.Find("ScoreText").GetComponent<Text>();
+        endOfRoundText = GameObject.Find("Rounds").GetComponent<Text>();
     }
 
     private void Start()
     {
-       // TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
-       // StartGame();
+        
+        // TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
+        // StartGame();
+
     }
     // Update is called once per frame
     void Update()
@@ -84,15 +91,21 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         if (gameStarted)
+        {
+           
             Debug.LogError("Attempted to start the game while it is already running! This shouldn't happen...");
+        }
         else
         {
+
+            currentScore.text = "Score:" + score.ToString();
+            endOfRoundText.text = "Round " + currentRound;
             Debug.Log("Starting the game.");
             gameStarted = true;
             UIManager.Instance.DisplayGameplay();
 
             //endOfRoundText = GameObject.Find("NewRoundText").GetComponent<UnityEngine.UI.Text>();
-           // TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
+            // TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
         }
     }
 
@@ -154,13 +167,13 @@ public class GameManager : MonoBehaviour
                     /* Remove the cards from the tracked list, we have no need to keep track of them anymore */
                     visibleCardList.Remove(card);
                     visibleCardList.Remove(otherCard);
-
+                    currentScore.text = "Score:" + score.ToString();
                     Debug.Log("Card pair matched! Type: " + card.cardType);
 
                 }
             }
             // maximum number of pairs reached start a new game round 
-            if (score == maxNumberOfPairs)
+            if (score == numberOfPairs)
             {
                 MultipleRounds();
             }
@@ -192,9 +205,12 @@ public class GameManager : MonoBehaviour
             cards.matched = false;
         }
         score = 0; // need to reset the score 
-
-        endOfRoundText.text = "Next Round";
+        currentRound++;
+        currentScore.text = "Score:" + score;
+        endOfRoundText.text = "Round" + currentRound;
+       
         
-        StartGame();
+        
+        //StartGame();
     }
 }
