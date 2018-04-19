@@ -59,8 +59,12 @@ public class ExampleStreaming : MonoBehaviour
 
     private SpeechToText _speechToText;
 
+    GameManager mGameManager;
+
     void Start()
     {
+        mGameManager = new GameManager();
+       
         LogSystem.InstallDefaultReactors();
         ResultsDisplay.SetActive(DebugMode);
 
@@ -227,11 +231,13 @@ public class ExampleStreaming : MonoBehaviour
                         {
                             //start game function call here
                             Debug.Log("Start recognised - function called!");
+                            mGameManager.StartGame();
                         }
                         if (keyword.normalized_text.Equals("quit"))
                         {
                             //end game function here
                             Debug.Log("Quit game recognised - function called!");
+                            mGameManager.QuitGame();
                         }
                         if (keyword.normalized_text.Equals("test"))
                         {

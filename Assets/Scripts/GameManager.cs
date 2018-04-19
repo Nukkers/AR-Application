@@ -89,6 +89,8 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Starting the game.");
             gameStarted = true;
+            UIManager.Instance.DisplayGameplay();
+
             //endOfRoundText = GameObject.Find("NewRoundText").GetComponent<UnityEngine.UI.Text>();
            // TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
         }
@@ -100,6 +102,7 @@ public class GameManager : MonoBehaviour
         if (gameStarted)
         {
             gameStarted = false;
+            UIManager.Instance.SetDisplayMode(UIState.MainMenu);
             Debug.Log("Quitting instance of the game");
             TrackerManager.Instance.GetTracker<ObjectTracker>().Stop();
         }
