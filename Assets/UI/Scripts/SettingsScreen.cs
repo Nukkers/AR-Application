@@ -32,14 +32,12 @@ public class SettingsScreen : MonoBehaviour {
 		
 	}
 
-<<<<<<< HEAD
 
-=======
     public void OnBackButtonClicked()
     {
         UIManager.Instance.DisplayMainMenu();
     }
->>>>>>> 9c21fe72e7641546fe3b2f32dc2109e486cd4857
+
     /// <summary>
     /// OnClick handler for the Audio Description button
     /// </summary>
