@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public Text endOfRoundText;
     public Text currentScore;
-    public int maxNumberOfPairs = 3; // maximum number of pairs within the game 
-    public int numberOfPairs = 4;
+    public int numberOfPairsFound = 0; // number of card pairs matched by the user 
+    public int totalNumberOfPairs = 4;
     public string matchedParticleFXName = "CardMatchParticles";
     public int currentRound = 1;
 
@@ -154,6 +154,7 @@ public class GameManager : MonoBehaviour
                 /* If otherCard is non-null we can presume we have a match and continue with the match handling logic */
                 if (otherCard != null)
                 {
+                    numberOfPairsFound++; // user has found a matching pair increment the count
                     score++; // Increment the score
                     card.matched = true; // Stop that card from being matched in the future
                     otherCard.matched = true; // Stop that card from being matched in the future
@@ -173,7 +174,7 @@ public class GameManager : MonoBehaviour
                 }
             }
             // maximum number of pairs reached start a new game round 
-            if (score == numberOfPairs)
+            if (numberOfPairsFound == totalNumberOfPairs)
             {
                 MultipleRounds();
             }
@@ -196,7 +197,7 @@ public class GameManager : MonoBehaviour
     /// reset the cards matched to false so they can be paired up again 
     public void MultipleRounds()
     {
-        //endOfRoundText.text = "End of round";
+        endOfRoundText.text = "End of round";
         Debug.Log("New game is being started");
         var cardsFound = FindObjectsOfType<Card>();
         Debug.Log(cardsFound + " : " + cardsFound.Length);
@@ -204,10 +205,10 @@ public class GameManager : MonoBehaviour
         {
             cards.matched = false;
         }
-        score = 0; // need to reset the score 
-        currentRound++;
-        currentScore.text = "Score:" + score;
-        endOfRoundText.text = "Round" + currentRound;
+        numberOfPairsFound = 0; // reset the number of pairs found by the user as it's a new round 
+        currentRound++; // increment the round number 
+        currentScore.text = "Score:" + score; // output to the console score and round number 
+        endOfRoundText.text = "Round:" + currentRound;
        
         //StartGame();
     }
