@@ -209,8 +209,6 @@ public class GameManager : MonoBehaviour
         currentScore.text = "Score:" + score;
         endOfRoundText.text = "Round" + currentRound;
        
-        
-        
         //StartGame();
     }
 }
