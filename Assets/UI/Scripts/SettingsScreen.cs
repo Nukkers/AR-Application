@@ -8,6 +8,7 @@ public class SettingsScreen : MonoBehaviour {
     private AudioSource[] mAudio; // Will store audio sources that will be played when a button is clicked (if audio description is enabled)
 
     private Transform mAudioButton; // audio button
+    public BigToggleButton mVoiceToggle;
     private Transform mContrastButton; // contrast button
     private Transform mVoiceButton; // voice input button
 
@@ -31,7 +32,14 @@ public class SettingsScreen : MonoBehaviour {
 		
 	}
 
+<<<<<<< HEAD
 
+=======
+    public void OnBackButtonClicked()
+    {
+        UIManager.Instance.DisplayMainMenu();
+    }
+>>>>>>> 9c21fe72e7641546fe3b2f32dc2109e486cd4857
     /// <summary>
     /// OnClick handler for the Audio Description button
     /// </summary>

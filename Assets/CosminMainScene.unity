@@ -238,9 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  pairID: 3
+  cardType: 3
+  audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
 --- !u!33 &183229311
 MeshFilter:
@@ -579,9 +579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  pairID: 1
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
 --- !u!33 &476793904
 MeshFilter:
@@ -735,9 +735,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  pairID: 1
+  cardType: 1
+  audioCue: {fileID: 8300000, guid: c4f336e52b5d39c4a802136b23ef20d0, type: 3}
   matched: 0
 --- !u!33 &545339783
 MeshFilter:
@@ -1089,9 +1089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  pairID: 3
+  cardType: 3
+  audioCue: {fileID: 8300000, guid: f155fbb939d3efd42bac0f6b2bcbd14d, type: 3}
   matched: 0
 --- !u!33 &837845231
 MeshFilter:
@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairID: 0
   cardType: 0
-  audioCue: {fileID: 0}
+  audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
 --- !u!33 &998683855
 MeshFilter:
@@ -1667,9 +1667,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  pairID: 2
+  cardType: 2
+  audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
 --- !u!33 &1059714329
 MeshFilter:
@@ -1953,9 +1953,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94dba6523a6654448f5e27e1ff7b2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairID: 0
-  cardType: 0
-  audioCue: {fileID: 0}
+  pairID: 2
+  cardType: 2
+  audioCue: {fileID: 8300000, guid: 6777768271a6a9444a55e14008d81531, type: 3}
   matched: 0
 --- !u!33 &1280685896
 MeshFilter:
@@ -2253,6 +2253,7 @@ RectTransform:
   m_Children:
   - {fileID: 649281471}
   - {fileID: 1734286244}
+  - {fileID: 1774926139}
   m_Father: {fileID: 1308864210}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2387,7 +2388,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: tiger2Material
+  m_Name: tree2Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -2400,7 +2401,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c9b0fa464b684747997f197f4963e9e3, type: 3}
+        m_Texture: {fileID: 2800000, guid: a621429db27d4a039d0481f1e414e73c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -2479,7 +2480,7 @@ GameObject:
   - component: {fileID: 1734286246}
   - component: {fileID: 1734286245}
   m_Layer: 5
-  m_Name: MyText
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2500,7 +2501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 201, y: 106}
+  m_AnchoredPosition: {x: 141.7, y: 106}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734286245
@@ -2542,6 +2543,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1734286243}
+--- !u!1 &1774926138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1774926139}
+  - component: {fileID: 1774926141}
+  - component: {fileID: 1774926140}
+  m_Layer: 5
+  m_Name: Rounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1774926139
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1774926138}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1454985197}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 141.70001, y: 73.5}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1774926140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1774926138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1774926141
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1774926138}
 --- !u!43 &1796691856
 Mesh:
   m_ObjectHideFlags: 0
@@ -2737,7 +2812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairID: 0
   cardType: 0
-  audioCue: {fileID: 0}
+  audioCue: {fileID: 8300000, guid: 0f698852d821219498cf5af87fec1fbe, type: 3}
   matched: 0
 --- !u!33 &1859903283
 MeshFilter:
