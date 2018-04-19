@@ -74,10 +74,10 @@ public class GazeInput : MonoBehaviour
                     Button obj = result.gameObject.GetComponent<Button>(); // Surely there's a better way?
                     if (obj != null)
                     {
-                        // Sound when gazed upon. 4 second delay (keeps repeating)
+                        // Sound when gazed upon. 3 second delay (keeps repeating)
                         mAudio = obj.GetComponent<AudioSource>();
                         if (mAudio != null && !mAudio.isPlaying)
-                            //mAudio.PlayDelayed(4.0f);
+                            //mAudio.PlayDelayed(3.0f);
 
                         if (obj != lastSelected && lastSelected != null)
                             lastSelected.OnDeselect(null);
