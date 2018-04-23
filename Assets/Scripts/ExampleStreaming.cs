@@ -30,6 +30,11 @@ public class ExampleStreaming : MonoBehaviour
     const string _password = "Ydu7ifGnKUjI";
     const string _url = "https://stream.watsonplatform.net/speech-to-text/api";
 
+    //***NEW LOGINS***
+    //New API acc created for demo - only use on demo day to ensure availability of API
+    //const string _username = "6254cd92-f7b3-4d5f-ac26-990faf640491";
+    //const string _password = "tZ02qPBCV4EX";
+
     [Header("Settings")]
     [Tooltip("Disable speech recognition if not needed to prevent unneccesary use of cloud allowance")]
     public bool SpeechRecogEnabled = false;    //Allow switch off to preserve cloud allowance
