@@ -11,20 +11,25 @@ public class SettingsScreen : MonoBehaviour {
     public BigToggleButton mVoiceToggle;
     private Transform mContrastButton; // contrast button
     private Transform mVoiceButton; // voice input button
+    private GameObject[] mModels; // holds all gameobjects of the models (for setting new model size)
+    private GameObject mLastSizeSelected = null; 
 
     public ExampleStreaming mVoiceInput;
 
 	// Use this for initialization
 	void Start () {
+        mModels = GameObject.FindGameObjectsWithTag("Models");
 
-        // Access screenwidget -> layout panel ->  button ---- probably there are easier ways to do it, but this would be faster than just using GameObject.Find ? Uglier though.
+        // Access screenwidget -> panel ->  button
         mAudioButton = gameObject.transform.Find("LayoutPanel").transform.Find("AudioDescriptionButton");
         mContrastButton = gameObject.transform.Find("LayoutPanel").transform.Find("HighContrastButton");
         mVoiceButton = gameObject.transform.Find("LayoutPanel").transform.Find("VoiceInputButton");
-        mVoiceInput = GameObject.Find("WatsonSpeechRecognition").GetComponent<ExampleStreaming>();
+
+        //mVoiceInput = GameObject.Find("WatsonSpeechRecognition").GetComponent<ExampleStreaming>();
 
         //Set status of buttons
-        mVoiceButton.GetComponent<BigToggleButton>().OnSetState(mVoiceInput.IsEnabled());
+        //mVoiceButton.GetComponent<BigToggleButton>().OnSetState(mVoiceInput.IsEnabled());
+
     }
 
     // Update is called once per frame
@@ -131,5 +136,51 @@ public class SettingsScreen : MonoBehaviour {
         {
             audio.Stop();
         }
+    }
+
+    // Resize models based on the name of the button that was clicked
+    public void OnModelSizeClicked(GameObject button)
+    {
+        // scale of models
+        const float defaultScale = 1.0f;
+        const float largeScale = 2.0f;
+        const float xLargeScale = 2.5f;
+
+        // check if the same model size button was not pressed 2 times in row
+        if (mLastSizeSelected != button)
+        {
+            mLastSizeSelected = button;
+
+            button.GetComponents<AudioSource>();
+            
+            switch (button.name)
+            {
+                case "DefaultSizeButton":
+                    foreach (GameObject model in mModels)
+                        model.transform.localScale = new Vector3(defaultScale, defaultScale, defaultScale);
+                    break;
+
+                case "LargeSizeButton":
+                    foreach (GameObject model in mModels)
+                        model.transform.localScale = new Vector3(largeScale, largeScale, largeScale);
+                    break;
+
+                case "XLargeSizeButton":
+                    foreach (GameObject model in mModels)
+                        model.transform.localScale = new Vector3(xLargeScale, xLargeScale, xLargeScale);
+                    break;
+            }
+            // Play sound if audio description button is toggled on
+            if (mAudioButton.GetComponent<BigToggleButton>().selectionState)
+            {
+                if (mAudio != null)
+                    StopPlayingSound();
+
+                mAudio = button.GetComponents<AudioSource>();
+                mAudio[0].Play();
+            }
+
+        }
+
     }
 }
