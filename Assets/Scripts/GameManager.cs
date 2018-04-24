@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     public event CardMatchEventHandler cardEvent;
 
     public bool gameStarted = false;
-    public Transform tiger;
     public List<Card> visibleCardList;
     public int score = 0;
     public Text endOfRoundText;
@@ -69,7 +68,6 @@ public class GameManager : MonoBehaviour
         visibleCardList = new List<Card>();
         currentScore = GameObject.Find("ScoreText").GetComponent<Text>();
         endOfRoundText = GameObject.Find("Rounds").GetComponent<Text>();
-        tiger = GameObject.Find("Tiger").GetComponentInChildren<Transform>();
     }
 
     private void Start()
@@ -82,7 +80,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tiger.transform.localScale = new Vector3(2, 2, 2);
     }
 
     /// <summary>
