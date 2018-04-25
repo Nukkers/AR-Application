@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public Text endOfRoundText;
     public Text currentScore;
-    public int maxNumberOfPairs = 3; // maximum number of pairs within the game 
-    public int numberOfPairs = 4;
+    public int numberOfPairsFound = 0; // number of a card pairs matched by the user 
+    public int totalNumberOfPairs = 4; // maximum number of pairs within the game 
     public string matchedParticleFXName = "CardMatchParticles";
     public int currentRound = 1;
 
@@ -94,17 +94,12 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Attempted to start the game while it is already running! This shouldn't happen...");
         }
         else
-        {
-
-            currentScore.text = "Score:" + score.ToString();
-            endOfRoundText.text = "Round " + currentRound;
+        {         
+            currentScore.text = "Score: " + score.ToString();
+            endOfRoundText.text = "Round: " + currentRound;
             Debug.Log("Starting the game.");
             gameStarted = true;
             UIManager.Instance.DisplayGameplay();
-         
-
-            //endOfRoundText = GameObject.Find("NewRoundText").GetComponent<UnityEngine.UI.Text>();
-            // TrackerManager.Instance.GetTracker<ObjectTracker>().Start();
         }
     }
 
@@ -153,6 +148,7 @@ public class GameManager : MonoBehaviour
                 /* If otherCard is non-null we can presume we have a match and continue with the match handling logic */
                 if (otherCard != null)
                 {
+                    numberOfPairsFound++;
                     score++; // Increment the score
                     card.matched = true; // Stop that card from being matched in the future
                     otherCard.matched = true; // Stop that card from being matched in the future
@@ -172,7 +168,7 @@ public class GameManager : MonoBehaviour
                 }
             }
             // maximum number of pairs reached start a new game round 
-            if (score == numberOfPairs)
+            if (numberOfPairsFound == totalNumberOfPairs)
             {
                 MultipleRounds();
             }
@@ -195,7 +191,6 @@ public class GameManager : MonoBehaviour
     /// reset the cards matched to false so they can be paired up again 
     public void MultipleRounds()
     {
-        //endOfRoundText.text = "End of round";
         Debug.Log("New game is being started");
         var cardsFound = FindObjectsOfType<Card>();
         Debug.Log(cardsFound + " : " + cardsFound.Length);
@@ -203,11 +198,9 @@ public class GameManager : MonoBehaviour
         {
             cards.matched = false;
         }
-        score = 0; // need to reset the score 
-        currentRound++;
-        currentScore.text = "Score:" + score;
-        endOfRoundText.text = "Round" + currentRound;
-       
-        //StartGame();
+        numberOfPairsFound = 0; // reset the number of pairs found by the user as it is a new round 
+        currentRound++; // increment the round number 
+        currentScore.text = "Score:" + score; // output the score and round number 
+        endOfRoundText.text = "Round: " + currentRound;       
     }
 }
