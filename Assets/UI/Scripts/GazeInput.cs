@@ -94,8 +94,10 @@ public class GazeInput : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
                 hasClicked = true;
 
-            if (hasClicked && lastSelected != null)
+            if (hasClicked && lastSelected != null) // Process click events. Pass the event along to the object being clickedf
                 lastSelected.OnPointerClick(m_PointerEventData);
+            else if (hasClicked && lastSelected == null) // Process clicks into open space. This should recenter the UI
+                UIManager.Instance.OnOpenAirClick();
         }
     }
 

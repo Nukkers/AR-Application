@@ -86,10 +86,34 @@ public class UIManager : MonoBehaviour
     private void SetWidgetActive(GameObject widget)
     {
         widget.transform.position = (Camera.main.transform.forward * 10); // Set the transform 10 units infront of the camera.
-        //widget.transform.LookAt(Camera.main.transform.forward); // We should be able to safely assume that 0,0,0 is the camera.
+        widget.transform.LookAt(Camera.main.transform); // look at the position of the camera (usually _V(0,0,0), ensures the UI doesn't spawn at an odd angle)
         widget.SetActive(true);
     }
 
+    /// <summary>
+    /// Helper function to retrieve the currently active widget.
+    /// </summary>
+    /// <returns></returns>
+    private GameObject GetActiveWidget()
+    {
+        switch (currentState)
+        {
+            case UIState.MainMenu:
+                return mMainScreen;
+                break;
+            case UIState.Settings:
+                return mSettingsScreen;
+                break;
+            default:
+                return null;
+                break;
+        }
+    }
+    /// <summary>
+    /// Sets the current display mode. Handles setting prefabs as active / inactive as the 
+    /// current state requires.
+    /// </summary>
+    /// <param name="newMode"></param>
     public void SetDisplayMode(UIState newMode)
     {
         switch (currentState)
@@ -120,12 +144,30 @@ public class UIManager : MonoBehaviour
 
         currentState = newMode; // Set the current state to be the new mode.
     }
+
+    /// <summary>
+    /// Called when a click is performed into open air.
+    /// Here we reset any open UI on the camera. We would also spawn the in-game UI here,
+    /// if we had gotten that far...
+    /// </summary>
+    public void OnOpenAirClick()
+    {
+        if(currentState != UIState.Default)
+            SetWidgetActive(GetActiveWidget());
+    }
+
+    /// <summary>
+    /// Called when the settings screen should be displayed
+    /// </summary>
     public void DisplaySettingsScreen()
     {
         SetDisplayMode(UIState.Settings);
         Debug.Log("UI State changed! now displaying settings screen");
     }
 
+    /// <summary>
+    /// Called when the gameplay display mode should be active (i.e, hide everything but the gaze cursor
+    /// </summary>
     public void DisplayGameplay()
     {
         SetDisplayMode(UIState.Default);
