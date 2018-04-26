@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
         
         //Debug.Log("Inside start func");
         visibleCardList = new List<Card>();
+        /* Retrieve the text field objects that the score / end of round status is placed into */
         currentScore = GameObject.Find("ScoreText").GetComponent<Text>();
         endOfRoundText = GameObject.Find("Rounds").GetComponent<Text>();
     }
